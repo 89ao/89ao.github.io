@@ -14,10 +14,11 @@ tags:
 
 
 ###两种pages模式
---------------------------
+
 
 
 ####User/Organization Pages 个人或公司站点
+
 
 1. 使用自己的用户名，每个用户名下面只能建立一个；
 
@@ -27,6 +28,7 @@ tags:
 
 
 ####Project Pages 项目站点
+
 
 1. gh-pages分支用于构建和发布；
 
@@ -39,12 +41,12 @@ tags:
 5. 创建项目站点步骤：
 
 
-  git clone https://github.com/USERNAME/PROJECT.git PROJECT
-  git checkout --orphan gh-pages
-  git rm -rf .
-  git add .
-  git commit -a -m "First pages commit"
-  git push origin gh-pages
+>git clone https://github.com/USERNAME/PROJECT.git PROJECT
+>git checkout --orphan gh-pages
+>git rm -rf .
+>git add .
+>git commit -a -m "First pages commit"
+>git push origin gh-pages
 
 
 ####可以通过User/Organization Pages建立主站，而通过Project Pages挂载二级应用页面。
