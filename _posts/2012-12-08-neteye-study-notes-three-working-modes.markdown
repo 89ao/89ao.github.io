@@ -7,7 +7,9 @@ slug: neteye-study-notes-three-working-modes
 title: NetEye学习笔记--三种工作模式
 thread: 171
 categories:
-- 防火墙设置
+- firewall
+tags:
+- firewall
 ---
 
 NetEye有三种工作模式：透明模式、路由模式和混合模式。NetEye的工作模式是通过设置接口的工作模式来实现的。当NetEye工作在透明模式时，需要将接口设置为二层接口；当NetEye工作在路由模式时，需要将接口设置为三层接口；当NetEye工作在混合模式时，则需要将相关接口分别设置为二层接口和三层接口。
