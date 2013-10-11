@@ -8,7 +8,7 @@ layout: default
 {% if page.categories.size != 0 %}
  | 
 <span class="categories">
-  分类
+  categories
   {% for cat in page.categories %}
   <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
   {% endfor %}
@@ -17,7 +17,7 @@ layout: default
 {% if page.tags.size != 0 %}
  | 
 <span class="tags">
-  标签
+  tags
   {% for tag in page.tags %}
   <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
   {% endfor %}
@@ -29,7 +29,7 @@ layout: default
 </section>
 <section align="right">
 <br/>
-<span>
+<span style="text-align:right;">
 	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
 	&nbsp;&nbsp;&nbsp;
 	<a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
