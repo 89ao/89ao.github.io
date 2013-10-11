@@ -3,13 +3,18 @@ author: pandao
 comments: false
 date: 2013-10-11
 layout: post
-slug: replace-contents-of-many-files
-title: Linux下批量替换文件内容
+slug: Linux下批量替换文件内容
+title: replace-contents-of-many-files
 categories:
 - linux
 tags
 - linux sed
 ---
+
+
+
+
+
 
 1。 网络上现成的资料
 　　格式: sed -i "s/查找字段/替换字段/g" `grep 查找字段 -rl 路径`
