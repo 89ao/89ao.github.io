@@ -7,8 +7,10 @@ slug: replace-contents-of-many-files
 title: Linux下批量替换文本内容
 categories:
 - linux
+- shell
 tags:
 - sed
+- shell
 ---
 
 
