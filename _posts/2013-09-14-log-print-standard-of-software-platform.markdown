@@ -4,7 +4,7 @@ comments: false
 date: 2013-09-14 07:43:34+00:00
 layout: post
 published: false
-slug: the-server-didnt-respond-in-time
+slug: log-print-standard-of-software-platform
 title: 软件平台日志打印规范
 thread: 254
 categories:
