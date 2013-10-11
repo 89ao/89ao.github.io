@@ -8,6 +8,8 @@ title: 如何成为一名效率更高的系统管理员
 thread: 262
 categories:
 - linux
+tags:
+- linux
 ---
 
 
@@ -26,7 +28,7 @@ categories:
 
 学会这 10 个技巧后，您将成为世界上最强大的 Linux® 系统管理员，整个世界是有点夸张，但要在一个大团队中工作，这些技巧是十分必要的。学习 SHH 通道、VNC、密码恢复、控制台侦察等等。各个技巧都附有例子，可以将这些例子复制到自己的系统中。
 
-![](http://dw1.s81c.com/developerworks/i/v17/dw-cmts-arrow.png) [评论：](http://www.ibm.com/developerworks/cn/linux/l-10sysadtips/#icomments)
+
 
 
 
