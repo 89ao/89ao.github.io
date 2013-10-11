@@ -8,6 +8,9 @@ title: Iptables SElinux学习总结
 thread: 103
 categories:
 - linux
+- firewall
+tags:
+- firewall
 ---
 
 Iptables：
