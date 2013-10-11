@@ -8,6 +8,9 @@ title: iptables 详细的使用指南
 thread: 233
 categories:
 - linux
+- firewall
+tags:
+- firewall
 ---
 
 Linux系统中,防火墙(Firewall),网址转换(NAT),数据包(package)记录,流量统计,这些功能是由Netfilter子系统所提供的，而iptables是控制Netfilter的工具。iptables将许多复杂的规则组织成成容易控制的方式，以便管理员可以进行分组测试，或关闭、启动某组规则。
