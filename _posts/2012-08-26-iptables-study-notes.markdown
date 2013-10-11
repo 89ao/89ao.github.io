@@ -8,6 +8,9 @@ title: iptables学习笔记
 thread: 109
 categories:
 - linux
+- firewall
+tags:
+- firewall
 ---
 
 常用命令
