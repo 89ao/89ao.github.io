@@ -14,6 +14,7 @@ tags:
 
 
 ###两种pages模式
+--------------------------
 
 
 ####User/Organization Pages 个人或公司站点
@@ -23,6 +24,7 @@ tags:
 2. 资源命名必须符合这样的规则username/username.github.com；
 
 3. 主干上内容被用来构建和发布页面
+
 
 ####Project Pages 项目站点
 
@@ -36,6 +38,7 @@ tags:
 
 5. 创建项目站点步骤：
 
+
   git clone https://github.com/USERNAME/PROJECT.git PROJECT
   git checkout --orphan gh-pages
   git rm -rf .
@@ -43,4 +46,5 @@ tags:
   git commit -a -m "First pages commit"
   git push origin gh-pages
 
-###可以通过User/Organization Pages建立主站，而通过Project Pages挂载二级应用页面。
+
+####可以通过User/Organization Pages建立主站，而通过Project Pages挂载二级应用页面。
