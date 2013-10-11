@@ -15,6 +15,8 @@ tags:
 
 
 1、网络上现成的资料
+
+
 　　格式: sed -i "s/查找字段/替换字段/g" `grep 查找字段 -rl 路径`
 
 　　linux sed 批量替换多个文件中的字符串
@@ -28,6 +30,7 @@ tags:
 　　exp:sed -i "s/shabi/$/g" `grep shabi -rl ./`
 
 2、自己额外附加
+
 
 　　2.1 将文件1.txt内的文字“garden”替换成“mirGarden”
 
