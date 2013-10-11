@@ -3,11 +3,13 @@ author: pandao
 comments: false
 date: 2013-08-15 06:42:27+00:00
 layout: post
-slug: the-server-didnt-respond-in-time
+slug: testing-IO-speed-on-linux
 title: linux下测试磁盘的读写IO速度
 thread: 224
 categories:
 - linux
+tags:
+- 性能
 ---
 
 time有计时作用，dd用于复制，从if读出，写到of。if=/dev/zero不产生IO，因此可以用来[测试](http://softtest.chinaitlab.com/)纯写速度。同理of=/dev/null不产生IO，可以用来[测试](http://softtest.chinaitlab.com/)纯读速度。bs是每次读或写的大小，即一个块的大小，count是读写块的数量。
