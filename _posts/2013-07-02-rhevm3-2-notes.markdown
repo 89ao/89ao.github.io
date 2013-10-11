@@ -1,0 +1,54 @@
+---
+author: pandao
+comments: false
+date: 2013-07-02 07:58:36+00:00
+layout: post
+slug: rhevm3-2-notes
+title: rhevm3.2笔记
+thread: 200
+categories:
+- linux
+---
+
+rhn_register
+
+rhevm rhevm-reports
+rhevm-dwh-setup
+rhevm-reports-setup
+
+rhn-channel --list
+
+    
+    rhn-channel -u <username> -p <password> /
+    -c  rhel-x86_64-server-6 /
+    -c  jbappplatform-6-x86_64-server-6-rpm /
+    -c  rhel-x86_64-server-6-rhevm-3.2 /
+    -c  rhel-x86_64-server-ha-6 /
+    -c  rhel-x86_64-server-supplementary-6 -a
+
+
+tar cvf result.tar /dir/
+scp命令未找到yum install openssh-clients
+
+挂载nfs失败：yum install nfs-utils
+
+createrepo /tar/dir
+
+
+
+
+
+1、查看系统中的软连接，比如：find /usr/lib -type l|xargs ls -l ；
+
+
+
+
+2、查看系统中无效的软连接，
+
+
+
+
+find . -type l  -print |xargs lsattr -d 2>&1|grep "No such file or directory"| awk '{print $11}'
+
+
+
