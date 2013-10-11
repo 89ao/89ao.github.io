@@ -13,9 +13,10 @@ tags:
 
 
 
-##两种pages模式
+###两种pages模式
 
-###User/Organization Pages 个人或公司站点
+
+####User/Organization Pages 个人或公司站点
 
 1. 使用自己的用户名，每个用户名下面只能建立一个；
 
@@ -23,7 +24,7 @@ tags:
 
 3. 主干上内容被用来构建和发布页面
 
-###Project Pages 项目站点
+####Project Pages 项目站点
 
 1. gh-pages分支用于构建和发布；
 
