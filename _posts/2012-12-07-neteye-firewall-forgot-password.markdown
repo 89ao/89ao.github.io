@@ -7,7 +7,9 @@ slug: neteye-firewall-forgot-password
 title: NetEye防火墙忘记密码
 thread: 170
 categories:
-- 防火墙设置
+- firewall
+tags:
+- firewall
 ---
 
 手上有2个NetEye FW5120，但是由于很久之前配置过，忘记密码了，打过neusoft客服电话之后他们的工程师告诉我，这样可以清除密码：
