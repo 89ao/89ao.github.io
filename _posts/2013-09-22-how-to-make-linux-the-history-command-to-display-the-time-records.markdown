@@ -8,6 +8,10 @@ title: 如何让linux的history命令显示时间记录
 thread: 258
 categories:
 - linux
+- shell
+tags:
+- shell
+- bash
 ---
 
 注意：本方法只对bash-3.0以上版本有效
