@@ -8,6 +8,8 @@ title: HTTP协议详解-经典[转]
 thread: 252
 categories:
 - 杂七杂八
+tags:
+- HTTP协议
 ---
 
 **转自：[http://blog.csdn.net/gueter/archive/2007/03/08/1524447.aspx](http://blog.csdn.net/gueter/archive/2007/03/08/1524447.aspx)**
