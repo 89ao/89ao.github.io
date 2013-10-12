@@ -39,7 +39,8 @@ remmina：远程桌面
 
     sudo apt-get install leafpad evince remmina vim vim-gnome libreoffice
 
-teamviewer:也需要在teamviewer官网下载deb包安装，如有缺少的依赖关系apt-get install即可。 
+teamviewer:也需要在teamviewer官网下载deb包安装，如有缺少的依赖关系apt-get install即可。     
+
 - **更换浏览器**    
 
 谷歌chromium:
@@ -175,14 +176,15 @@ elementary-taprevival-icons
 
 
 ###关于常用的一些快捷键：
-终 端: Ctrl+Alt+T
-打开应用程序：Alt+F2
-窗口切换: Alt+Tab
-工作区切换: Super+Tab 或 Super+1 Super+2 (这里的数字都是大键盘上的)
-Ps.开始菜单键在linux中是成为Super,我这里就用Super了.
-打开所有的窗口预览: Super+A
-窗口和工作区预览：Super+S
-移动到第一个工作区: Super+Home
-移动到最后一个工作区: Super+End
-放大窗口：Super + '+' (大、小键盘+号)
-缩小窗口：Super + '-' (大、小键盘-号)
+
+>终 端: Ctrl+Alt+T  
+打开应用程序：Alt+F2    
+窗口切换: Alt+Tab   
+工作区切换: Super+Tab 或 Super+1 Super+2 (这里的数字都是大键盘上的)     
+Ps.开始菜单键在linux中是成为Super,我这里就用Super了.    
+打开所有的窗口预览: Super+A 
+窗口和工作区预览：Super+S   
+移动到第一个工作区: Super+Home  
+移动到最后一个工作区: Super+End 
+放大窗口：Super + '+' (大、小键盘+号)   
+>缩小窗口：Super + '-' (大、小键盘-号)  
