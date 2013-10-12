@@ -1,12 +1,17 @@
 ---
+author: pandao
+comments: false
+date: 2013-10-11
 layout: post
 slug: git-multiply-push
-title: 我的elementaryOS设置
-date: 2013-10-12 08:09
-comments: true
-categories: blog
-tags:git
+title: git同时push到多个仓库
+categories:
+- GitHub
+tags:
+- GitHub
 ---
+
+
 git同时push到多个仓库
 By lidashuang at 8 个月前 , 324 次浏览
 为防止一个git仓库由于各种原因造成无法访问，可以将代码push到多个仓库。
