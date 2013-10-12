@@ -18,39 +18,11 @@ categories:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1
 
 
 
-
-
-
-
-
-
-`sudo` `gedit ``/etc/default/grub`
-
-
-
-
-
-
-
-
+>sudo gedit /etc/default/grub
 
 
 
@@ -59,11 +31,9 @@ categories:
 
 在打开文件中找到
 
-GRUB_CMDLINE_LINUX=""
-
-改成
-
-GRUB_CMDLINE_LINUX="acpi_backlight=vendor“
+>GRUB_CMDLINE_LINUX=""    
+改成    
+>GRUB_CMDLINE_LINUX="acpi_backlight=vendor“
 
 改好后保存即可
 
@@ -73,42 +43,7 @@ GRUB_CMDLINE_LINUX="acpi_backlight=vendor“
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1
-
-
-
-
-
-
-
-
-
-`sudo` `update-grub`
-
-
-
-
-
-
-
-
-
-
-
+>sudo update-grub
 
 
 
@@ -124,40 +59,10 @@ GRUB_CMDLINE_LINUX="acpi_backlight=vendor“
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 1
 
 
-
-
-
-
-
-
-
-`sudo` `gedit ``/etc/rc``.``local`
-
-
-
-
-
-
-
-
-
-
-
+>sudo gedit /etc/rc.local
 
 
 
@@ -165,7 +70,7 @@ GRUB_CMDLINE_LINUX="acpi_backlight=vendor“
 
 代码:
 
-echo 500 > /sys/class/backlight/intel_backlight/brightness
+>echo 500 > /sys/class/backlight/intel_backlight/brightness
 
 然后保存即可
 
