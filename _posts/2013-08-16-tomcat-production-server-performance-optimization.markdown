@@ -53,101 +53,10 @@ categories:
 你使用过tomcat的话，简单的说就是“内存溢出”. 通常情况下，这种问题出现在实际的生产环境中.产生这种问题的原因是tomcat使用较少的内存给进程,通过配置TOmcat的配置文件(Windows 下的catalina.bat或Linux下的catalina.sh)可以解决这种问题.这种解决方法是通过增加JVM的栈内存实现的.也就是说，JVM通常不去调用垃圾回收器，所以服务器可以更多关注处理web请求，并要求尽快完成。要更改文件(catalina.sh) 位于"\tomcat server folder\bin\catalina.sh"，下面，给出这个文件的配置信息，
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`1`
-
-
-`JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF``-8`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`2`
-
-
-`-server -Xms``1024``m -Xmx``1024``m`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`3`
-
-
-`-XX:NewSize=``512``m -XX:MaxNewSize=``512``m -XX:PermSize=``512``m`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`4`
-
-
-`-XX:MaxPermSize=``512``m -XX:+DisableExplicitGC"`
-
-
-
-
-
-
-
-
-
-
+	JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8
+	-server -Xms1024m -Xmx1024m
+	-XX:NewSize=512m -XX:MaxNewSize=512m -XX:PermSize=512m
+	-XX:MaxPermSize=512m -XX:+DisableExplicitGC"
 
 
 
@@ -164,46 +73,7 @@ categories:
 
 
 
-
-
-
-
-[view source](http://www.oschina.net/translate/tomcat-performance-tuning#viewSource)
-
-
-
-[print](http://www.oschina.net/translate/tomcat-performance-tuning#printSource)[?](http://www.oschina.net/translate/tomcat-performance-tuning#about)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`1`
-
-
-`<Listener className=``"org.apache.catalina.core.JreMemoryLeakPreventionListener"` `/>`
-
-
-
-
-
-
-
-
+	<Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
 
 
 
@@ -219,113 +89,11 @@ categories:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-`1`
-
-
-`<Connector port=``"8080"` `address=``"localhost"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`2`
-
-
-`maxThreads=``"250"` `maxHttpHeaderSize=``"8192"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`3`
-
-
-`emptySessionPath=``"true"` `protocol=``"HTTP/1.1"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`4`
-
-
-`enableLookups=``"false"` `redirectPort=``"8181"` `acceptCount=``"100"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`5`
-
-
-`connectionTimeout=``"20000"` `disableUploadTimeout=``"true"` `/>`
-
-
-
+	<Connector port="8080" address="localhost"
+	maxThreads="250" maxHttpHeaderSize="8192"
+	emptySessionPath="true" protocol="HTTP/1.1"
+	enableLookups="false" redirectPort="8181" acceptCount="100"
+	connectionTimeout="20000" disableUploadTimeout="true" />
 
 
 
@@ -335,71 +103,8 @@ categories:
 在上述配置中，maxThreads值设定为“250”，这指定可以由服务器处理的并发请求的最大数量。如果没有指定，这个属性的默认值为“200”。任何多出的并发请求将收到“拒绝连接”的错误提示，直到另一个处理请求进程被释放。错误看起来如下，
 
 
-
-
-
-
-
-
-[view source](http://www.oschina.net/translate/tomcat-performance-tuning#viewSource)
-
-
-
-[print](http://www.oschina.net/translate/tomcat-performance-tuning#printSource)[?](http://www.oschina.net/translate/tomcat-performance-tuning#about)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`1`
-
-
-`org.apache.tomcat.util.threads.ThreadPool logFull SEVERE: All threads (``250``) are`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`2`
-
-
-`currently busy, waiting. Increase maxThreads (``250``) or check the servlet status`
-
-
-
-
-
-
-
-
-
+	org.apache.tomcat.util.threads.ThreadPool logFull SEVERE: All threads (250) are
+	currently busy, waiting. Increase maxThreads (250) or check the servlet status
 
 
 
@@ -420,100 +125,10 @@ Tomcat有一个通过在server.xml配置文件中设置压缩的选项。压缩�
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`1`
-
-
-`<Connector port=``"8080"` `protocol=``"HTTP/1.1"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`2`
-
-
-`connectionTimeout=``"20000"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`3`
-
-
-`redirectPort=``"8181"` `compression=``"500"`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`4`
-
-
-`compressableMimeType=``"text/html,text/xml,text/plain,application/octet-stream"` `/>`
-
-
-
-
-
-
-
-
-
-
+	<Connector port="8080" protocol="HTTP/1.1"
+	connectionTimeout="20000"
+	redirectPort="8181" compression="500"
+	compressableMimeType="text/html,text/xml,text/plain,application/octet-stream" />
 
 
 
