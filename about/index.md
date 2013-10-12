@@ -22,4 +22,4 @@ GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github 
 ----
 
 
-[![新浪微博](http://service.t.sina.com.cn/widget/qmd/{{ site.weibo }}/f78fbcd2/1.png)](http://weibo.com/u/{{ site.weibo }})
+[![新浪微博](http://service.t.sina.com.cn/widget/qmd/{{ site.weibo }}/d643d182/7.png)](http://weibo.com/u/{{ site.weibo }})
