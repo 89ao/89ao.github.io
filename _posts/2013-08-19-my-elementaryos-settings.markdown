@@ -10,20 +10,20 @@ categories:
 - linux
 ---
 
-1,源什么的就别修改了，默认的就是中国的源，速度还不错。
+###源什么的就别修改了，默认的就是中国的源，速度还不错。
 联网老规矩
 
     sudo apt-get update && sudo apt-get upgrade
 
 
-2,如果安装时没联网，这个时候需要重新设置下载一次完整的语言包
+###如果安装时没联网，这个时候需要重新设置下载一次完整的语言包
 `系统设置`-`语言支持`-将汉语拖到第一位，点击`应用到整个系统`。
 点击`地区格式`，选择`汉语`，应用到整个系统
 
-3,附加驱动 jockey-gtk    
+###附加驱动 jockey-gtk    
 点击菜单栏中的附加驱动，如果没有，命令为jockey-gtk,选择一个驱动安装重启即可。 
 
-4,安装编译包build-essential
+###安装编译包build-essential
 
     sudo apt-get install build-essential
 
@@ -68,7 +68,7 @@ pps可能会出现的问题，就是一个劲缓冲，这时需要安装一个�
     sudo apt-get install libjpeg62
 
 
-5.添加ppa安装相关软件
+###添加ppa安装相关软件
 
     sudo apt-add-repository ppa:versable/elementary-update
     sudo apt-get update
@@ -151,7 +151,7 @@ elementary-taprevival-icons
     sudo apt-get install fcitx-sogoupinyin
 
 
-隐藏图标：  
+###隐藏图标：  
 在Applications菜单中有时候会多出来很多没用的图标，虽然没什么实际影响但是很扎眼。    
 要隐藏这些图标，需要稍微判断一下：  
 
@@ -164,14 +164,17 @@ elementary-taprevival-icons
 
 >NoDisplay=true
 
-保存退出即可
-笔记本显示屏亮度设定：
+保存退出即可    
+
+
+###笔记本显示屏亮度设定：
 
     sudo apt-get install xbacklight
 然后执行`xbacklight =40%`
 40%是我喜欢的亮度，可以随意改
 
-关于常用的一些快捷键：
+
+###关于常用的一些快捷键：
 终 端: Ctrl+Alt+T
 打开应用程序：Alt+F2
 窗口切换: Alt+Tab
