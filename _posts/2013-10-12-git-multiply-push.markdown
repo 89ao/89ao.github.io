@@ -19,11 +19,11 @@ tags:
 编辑本地仓库目录下面的.git目录下的config文件。
 
 添加：
-
-[remote "all"]
-url = git@github.com:licess/licess.git
-url = git@gitcafe.com:licess/licess.git
-
+    
+  >[remote "all"]    
+  >url = git@github.com:licess/licess.git    
+  >url = git@gitcafe.com:licess/licess.git
+  
 再push时，运行
 
-git push all master
+>git push all master
