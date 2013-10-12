@@ -41,12 +41,12 @@ tags:
 5. 创建项目站点步骤：
 
 
-    git clone https://github.com/USERNAME/PROJECT.git PROJECT    
-    git checkout --orphan gh-pages   
-    git rm -rf .   
-    git add .   
-    git commit -a -m "First pages commit"   
-    git push origin gh-pages   
+    >git clone https://github.com/USERNAME/PROJECT.git PROJECT    
+    >git checkout --orphan gh-pages   
+    >git rm -rf .   
+    >git add .   
+    >git commit -a -m "First pages commit"   
+    >git push origin gh-pages   
   
 
 ####可以通过User/Organization Pages建立主站，而通过Project Pages挂载二级应用页面。
