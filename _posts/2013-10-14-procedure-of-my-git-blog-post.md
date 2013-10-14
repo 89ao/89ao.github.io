@@ -59,6 +59,6 @@ A2，本来我是这么想的，做一个触发式同步的脚本，检测到有
 git_sync.sh文件内容如下
 
 	#!/bin/bash
-	rsync -avz --exclude ".git/" --exclude "_config.yml" --exclude "CNAME" /home/viao/gitcafe/89ao/ /home/viao/github/89ao.github.io/
+	rsync -avz --delete --exclude ".git/" --exclude "_config.yml" --exclude "CNAME" /home/viao/gitcafe/89ao/ /home/viao/github/89ao.github.io/
 
 没错没有任何技术含量和呵呵呵呵，但是这样做的结果就是能帮我在发布了cafe的文件之后，将cafe的文件同步到hub那边，然后告诉我同步结果如何，如果有更新，那么我再去hub那边发布一下，就O了。
