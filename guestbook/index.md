@@ -6,7 +6,7 @@ thread: 616
 ---
 
 
-![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/09/tiv8i.jpg)
+![](http://ww4.sinaimg.cn/mw690/7b405dbbgw1e9ko16tk6dj20pc0fuwhw.jpg)
 
 
 来了，就留下你的足迹吧，骚年。

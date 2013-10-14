@@ -6,7 +6,7 @@ layout: post
 slug: git-multiply-push
 title: git同时push到多个仓库
 categories:
-- GitHub
+- Git
 tags:
 - GitHub
 ---

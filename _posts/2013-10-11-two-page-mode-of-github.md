@@ -6,7 +6,7 @@ layout: post
 slug: two-page-mode-of-github
 title: GitHub的两种pages模式
 categories:
-- GitHub
+- Git
 tags:
 - GitHub
 ---

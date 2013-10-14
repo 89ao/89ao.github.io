@@ -91,7 +91,7 @@ eOS高级设置可以设置一些东西，比如dock，最大化最小化按钮�
     sudo apt-get install wingpanel-slim
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/ff12ffcec3fdfc031c1b1d69d53f8794a6c226ea.png)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/ff12ffcec3fdfc031c1b1d69d53f8794a6c226ea.png)
+![]({{ site.url }}/assets/wingpanel-slim.png)
 
 
 
@@ -101,7 +101,7 @@ eOS高级设置可以设置一些东西，比如dock，最大化最小化按钮�
     sudo apt-get install indicator-synapse
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/eos_search.jpg)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/eos_search.jpg)
+![]({{ site.url }}/assets/indicator-synapse.jpg)
 
 
 

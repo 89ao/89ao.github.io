@@ -19,7 +19,7 @@ NetEye有三种工作模式：透明模式、路由模式和混合模式。NetEy
 
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/12/透明模式.jpg)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/12/透明模式.jpg)
+![]({{ site.url }}/assets/TransparentMode.jpg)
 
 
 
@@ -29,10 +29,9 @@ NetEye有三种工作模式：透明模式、路由模式和混合模式。NetEy
 
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/12/路由模式.jpg)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/12/路由模式.jpg)
-
+![]({{ site.url }}/assets/RouterMode.jpg)
 
 
 
 混合模式是指NetEye同时工作在透明模式和路由模式两种模式下，能够同时实现数据流的二层转发和三层路由功能，如图所示：
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/12/混合模式.jpg)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/12/混合模式.jpg)
+![]({{ site.url }}/assets/MixedMode.jpg)

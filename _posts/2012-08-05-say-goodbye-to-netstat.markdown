@@ -37,4 +37,4 @@ categories:
 
 具体的替代方案，我做了一张简单的示意图：
 
-![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2012/09/netstat_subsititute.jpg)
+![]({{ site.url }}/assets/netstat_subsititute.jpg)

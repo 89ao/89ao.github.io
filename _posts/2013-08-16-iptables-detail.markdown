@@ -29,7 +29,7 @@ DNATDestination Network Address Translation 目标网络地址转换。 DNAT是�
 
 **2.1. iptable的链和表结构**
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables1.png)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables1.png)
+![]({{ site.url }}/assets/iptables1.png)
 
 如上图可以看出，iptable总体结构.
 
@@ -37,7 +37,7 @@ DNATDestination Network Address Translation 目标网络地址转换。 DNAT是�
 ### 2.2. 5个链(chain)
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables-chain.png)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables-chain.png)
+![]({{ site.url }}/assets/iptables-chain.png)
 
 PREROUTING在数据包进入防火墙之后、路由判断之前对数据包进行修改INPUT在数据包被路由到本地之后，但在用户空间程序看到它之前对数据包进行修改OUTPUT用户空间程序处理数据包后，由本地发出，再次被路由之前更改数据包FORWARD在最初的路由判断之后、最后一次更改包的源地址之前对数据包进行修改POSTROUTING在所有路由判断之后,对数据包进行修改
 
@@ -57,7 +57,7 @@ iptalbe中,要用 -t 参数指定要操作哪个表,如果没有 -t 参数�
 ### 2.4. 详细的数据包流程
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables-table.png)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables-table.png)
+![]({{ site.url }}/assets/iptables-table.png)
 
 从上图可以看出，数据包流环节和表的配合使用方法
 
@@ -65,7 +65,7 @@ iptalbe中,要用 -t 参数指定要操作哪个表,如果没有 -t 参数�
 ## 3. iptable应用场景
 
 
-[![](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables-use.gif)](http://ihalt-wordpress.stor.sinaapp.com/uploads/2013/08/iptables-use.gif)
+![]({{ site.url }}/assets/iptables-use.gif)
 
 上图是应用场景的简单拓扑描述,下面的应用场景举例，都以上图为参考.
 
