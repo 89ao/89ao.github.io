@@ -47,12 +47,15 @@ A1：文章发布脚本在此：
 	echo "---" >> $workspace/_posts/$date-$title.md;
 	vim $workspace/_posts/$date-$title.md;
 
-然后在.bashrc里添加一句`alias rakepost='sh ~/scripts/rakepost.sh`，以后每次使用的时候，只需 rakepost "title name"，也不需要在写title的时候手动加上短横` \- `，十分方便。退出vim之后还能显示新建的文件路径，若是要再次编辑或者删除，也十分方便。
+然后在.bashrc里添加一句`alias rakepost='sh ~/scripts/rakepost.sh'`，以后每次使用的时候，只需 rakepost "title name"，也不需要在写title的时候手动加上短横` \- `，十分方便。退出vim之后还能显示新建的文件路径，若是要再次编辑或者删除，也十分方便。
 
 **Q2，两个工作目录内容同步的问题。**
 A2，本来我是这么想的，做一个触发式同步的脚本，检测到有一边有改变就向另外一边同步，但是那样无疑要一直挂着一个检测进程，要不就是cron每几分钟执行一次，像我这样的性能狂人和电脑洁癖无疑是无法容忍的。最后又想一个简单的方法，描述如下：
 
-由于gitcafe的速度优势，我选择主要工作目录在cafe下，前面的发文等工作一切正常，但是当到了要提交的时候，我在.bashrc中做了一个别名：`alias cafe-push='git push origin gitcafe-pages && sh /home/viao/scripts/git_sync.sh'`
+由于gitcafe的速度优势，我选择主要工作目录在cafe下，前面的发文等工作一切正常，但是当到了要提交的时候，我在.bashrc中做了一个别名：
+
+	alias cafe-push='git push origin gitcafe-pages && sh /home/viao/scripts/git_sync.sh'    
+
 git_sync.sh文件内容如下
 
 	#!/bin/bash
