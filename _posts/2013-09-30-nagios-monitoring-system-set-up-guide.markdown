@@ -15,7 +15,8 @@ categories:
 
 Nagios 结构说明
 
-Nagios 结构上来说， 可分为核心和插件两个部分。Nagios 的核心部分只提供了很少的监控功能，因此要搭建一个完善的 IT 监控管理系统，用户还需要在 Nagios 服务器安装相应的插件，插件可以从 Nagios 官方网站下载 http://www.nagios.org/，也可以根据实际要求自己编写所需的插件。Nagios 可实现的功能特性	
+Nagios 结构上来说， 可分为核心和插件两个部分。Nagios 的核心部分只提供了很少的监控功能，因此要搭建一个完善的 IT 监控管理系统，用户还需要在 Nagios 服务器安装相应的插件，插件可以从 [Nagios 官方网站](http://www.nagios.org/)下载，也可以根据实际要求自己编写所需的插件。Nagios 可实现的功能特性:	
+
   * 监控网络服务（SMTP、POP3、HTTP、FTP、PING 等）；
 
 	
@@ -92,7 +93,9 @@ __编译安装 Nagios__
 
 （1）安装 Apache 和 php
 
-	#yum install httpd php*（2）配置 Apache
+	#yum install httpd php*
+
+（2）配置 Apache
 
 在 Apache 配置文件件/etc/httpd/conf/httpd.conf 中找到
 
@@ -424,22 +427,27 @@ process-host-perfdata 和 process-service-perfdata 指令声明了 nagios 输出
 
 
 将 hosts-pnp 和 services-pnp 引用到 hosts.cfg 和 services.cfg 中，修改后的 hosts.cfg 内容如图 13 和图 14 所示：
+
 **图 13. 在 hosts.cfg 文件中增加性能图片配置**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image027.jpg)
 
 **图 14. 在 services.cfg 文件中增加性能图片配置**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image029.jpg)验证性能分析图标功能
 
-访问 nagios 管理界面，点击查看哪台主机小太阳的图标，即可看到此主机的状态信息，这里点击的是 DirHost162 主机，详细如图 15 和图 16 所示：
+访问 nagios 管理界面，点击查看哪台主机小太阳的图标，即可看到此主机的状态信息，这里点击的是 DirHost162 主机，详细如图 15 和图 16 所示：  
+
 **图 15. 被监控主机管理界面**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image031.jpg)
 
 **图 16. 性能图标分析示意图**
-![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image033.jpg)利用 NRPE 扩展 Nagios 功能
+![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image033.jpg)
+
+利用 NRPE 扩展 Nagios 功能
 
 NRPE 是 Nagios 的一个功能扩展，它可在远程 Linux 和 UNIX 主机上执行插件程序。通过在远程服务器上安装 NRPE 构件及 Nagios 插件程序来向 Nagios 监控平台提供该服务器的一些本地情况，如 CPU 负载、内存使用、硬盘使用，服务等。这里将 Nagios 监控平台称为 Nagios 服务器 端，而将远程被监控的服务器称为 Nagios 客户端。
 
 下图为 NRPE 构件监控远程主机本地信息的运行原理:
+
 **图 17. 监控远程主机原理图**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image035.gif)
 NRPE 组成部分与检测类型
@@ -473,11 +481,16 @@ NRPE daemon 需要 Nagios 插件安装在远程的 Linux 主机上，否则 daem
 
 **图 18. 直接检测结构图**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image037.gif)
+
 **间接检测**：当运行 Nagios 的监控主机无法访问到某台被监控主机，但是运行 NRPE 的机器可以访问得到的时候，运行 NRPE 的主机就充当一个中间代理，将监控请求发送到被监控对象上。
 
 **图 19. 间接检测结构图**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image039.gif)
-在服务器端安装 NRPE 安装
+
+
+##在服务器端安装 
+
+###NRPE 安装
 
 **清单 15. 服务器安装 NRPE**
 
@@ -494,6 +507,7 @@ NRPE daemon 需要 Nagios 插件安装在远程的 Linux 主机上，否则 daem
 修改命令定义文件
 
 由于在 Nagios 命令定义文件 commands.cfg 没有 check_nrpe 命令， 因此需要对此文件进行修改与定义，配置细节如下图：
+
 **图 20. 在 commands.cfg 文件中增加 NRPE 配置**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image041.jpg)
 定义被监控主机
@@ -640,7 +654,7 @@ VMware 平台
 **图 25. 主机组和服务组界面**
 ![](http://www.ibm.com/developerworks/cn/linux/1309_luojun_nagios/image051.jpg)
 
-**_报告界面介绍_**
+**报告界面介绍**
 
 图 26，主要是记录一些事件信息，记录某台主机所监控对象的状态，若超出自己定义的配置，则会提示一般警告或严重告警信息，一旦主机恢复则自动告知用户当前主机的状态：
 
