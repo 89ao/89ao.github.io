@@ -23,9 +23,11 @@ tags:
 
 3. 配置
 
+
 	pptpsetup --create linkname --server xxx.xxx.xxx.xxx--username 用户名 --password 密码
 
 4. 连接
+
 
 	pppd call linkname
 
@@ -38,5 +40,6 @@ tags:
 ppp0是pptp连接的名字， 如果不确定 可以使用ifconfig命令查看。	
 
 6. 断开
+
 
 	killall pppd

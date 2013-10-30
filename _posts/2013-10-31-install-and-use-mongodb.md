@@ -9,7 +9,7 @@ tags:
 
 ---
 
-1. 下载
+##下载
 
 MongoDB的官网是http://www.mongodb.org/
 
@@ -17,14 +17,15 @@ MongoDB的官网是http://www.mongodb.org/
 
 本次安装操作系统为rhel6.4，32位。
 
-2. 开始安装
+##开始安装
+下载安装包
 
-	cd /usr/local/src
-	wget http://fastdl.mongodb.org/linux/mongodb-linux-i686-2.2.6.tgz
-	tar zxvf mongodb-linux-i686-2.2.6.tgz
-	mv mongodb-linux-i686-2.2.6 /usr/local/mongodb
+	cd /usr/local/src  
+	wget http://fastdl.mongodb.org/linux/mongodb-linux-i686-2.2.6.tgz  
+	tar zxvf mongodb-linux-i686-2.2.6.tgz  
+	mv mongodb-linux-i686-2.2.6 /usr/local/mongodb  
 
-3. 运行
+##运行
 
 首先创建数据目录和日志目录，实验环境为了方便，我们就安装在本地mongodb目录下。
 
@@ -51,12 +52,12 @@ MongoDB的官网是http://www.mongodb.org/
 
 这时还有一个警告：
 
->Thu Oct 31 02:47:22 [initandlisten] ** NOTE: when using MongoDB 32 bit, you are limited to about 2 gigabytes of data
->Thu Oct 31 02:47:22 [initandlisten] **       see http://blog.mongodb.org/post/137788967/32-bit-limitations
->Thu Oct 31 02:47:22 [initandlisten] **       with --journal, the limit is lower
+>Thu Oct 31 02:47:22 [initandlisten] ** NOTE: when using MongoDB 32 bit, you are limited to about 2 gigabytes of data    
+>Thu Oct 31 02:47:22 [initandlisten] **       see http://blog.mongodb.org/post/137788967/32-bit-limitations   
+>Thu Oct 31 02:47:22 [initandlisten] **       with --journal, the limit is lower    
 
 大致意思是：32位系统的MongoDB服务器每一个Mongod实例只能使用2G的数据文件。这是由于地址指针只能支持32位。	
-所以在生产环境中，尽量使用64位的系统。 
+所以在生产环境中，尽量使用`64位`的系统。 
 
 在这里检测mongodb是否已经正常运行：
 
@@ -73,7 +74,7 @@ MongoDB的官网是http://www.mongodb.org/
 	service iptables save
 	
 
-4. 简单使用examples：
+##简单使用examples：
 
 到这里我们的mongodb已经安装完成了，装完了不使用当然没有任何意义，简单的使用范例如下：
 
