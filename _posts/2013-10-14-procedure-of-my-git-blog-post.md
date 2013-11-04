@@ -30,7 +30,7 @@ tags:
 A1：文章发布脚本在此：
 
 	#!/bin/bash
-	workspace="/home/viao/gitcafe/89ao"
+	workspace="~/gitcafe/89ao"
 	date=`date +"%Y-%m-%d"`;
 	title=`echo $1|sed 's/\s\+/-/g'`;
 	echo $workspace/_posts/$date-$title.md;
@@ -54,11 +54,21 @@ A2，本来我是这么想的，做一个触发式同步的脚本，检测到有
 
 由于gitcafe的速度优势，我选择主要工作目录在cafe下，前面的发文等工作一切正常，但是当到了要提交的时候，我在.bashrc中做了一个别名：
 
-	alias cafe-push='git push origin gitcafe-pages && sh /home/viao/scripts/git_sync.sh'    
+	alias cafepush='git push origin gitcafe-pages && sh ~/scripts/git_sync.sh'
 
 git_sync.sh文件内容如下
 
 	#!/bin/bash
-	rsync -avz --progress --delete --exclude ".git/" --exclude "_config.yml" --exclude "CNAME" /home/viao/gitcafe/89ao/ /home/viao/github/89ao.github.io/
+	rsync -avz --progress --delete --exclude ".git/" --exclude "_config.yml" --exclude "CNAME" ~/gitcafe/89ao/ ~/github/89ao.github.io/
+
+###所以,总的alias如下：
+
+>alias cafepush='git push origin gitcafe-pages && sh ~/scripts/git_sync.sh'
+>alias cafe='cd ~/gitcafe/89ao/'
+>alias hub='cd ~/github/89ao.github.io/'
+>alias rakepost='sh ~/scripts/rakepost.sh'
+>alias gitsync='sh ~/scripts/git_sync.sh'	
+>alias gitcmt='git add . ; git commit -m'
+
 
 没错没有任何技术含量和呵呵呵呵，但是这样做的结果就是能帮我在发布了cafe的文件之后，将cafe的文件同步到hub那边，然后告诉我同步结果如何，如果有更新，那么我再去hub那边发布一下，就O了。
