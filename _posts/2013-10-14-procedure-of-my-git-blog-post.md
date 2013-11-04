@@ -63,12 +63,12 @@ git_sync.sh文件内容如下
 
 ###所以,总的alias如下：
 
->alias cafepush='git push origin gitcafe-pages && sh ~/scripts/git_sync.sh'
->alias cafe='cd ~/gitcafe/89ao/'
->alias hub='cd ~/github/89ao.github.io/'
->alias rakepost='sh ~/scripts/rakepost.sh'
->alias gitsync='sh ~/scripts/git_sync.sh'	
->alias gitcmt='git add . ; git commit -m'
+>alias cafepush='git push origin gitcafe-pages && sh ~/scripts/git_sync.sh'       
+>alias cafe='cd ~/gitcafe/89ao/'        
+>alias hub='cd ~/github/89ao.github.io/'      
+>alias rakepost='sh ~/scripts/rakepost.sh'      
+>alias gitsync='sh ~/scripts/git_sync.sh'	 
+>alias gitcmt='git add . ; git commit -m'        
 
 
 没错没有任何技术含量和呵呵呵呵，但是这样做的结果就是能帮我在发布了cafe的文件之后，将cafe的文件同步到hub那边，然后告诉我同步结果如何，如果有更新，那么我再去hub那边发布一下，就O了。
