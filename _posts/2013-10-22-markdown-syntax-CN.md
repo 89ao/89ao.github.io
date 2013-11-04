@@ -18,12 +18,8 @@ tags:
 
 **注：** 本项目托管于 [GitCafe][]上，请通过"派生"和"合并请求"来帮忙改进本项目。
 
-  [src1]: http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md
-  [src]: https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md
-  [t]: http://twitter.com/riku
-  [g]: http://gitcafe.com/riku/Markdown-Syntax-CN
-  [Github]: https://github.com/riku/Markdown-Syntax-CN
-  [GitCafe]: http://gitcafe.com/riku/Markdown-Syntax-CN/
+  [Github](https://github.com/riku/Markdown-Syntax-CN)
+  [GitCafe](http://gitcafe.com/riku/Markdown-Syntax-CN)
 
 Markdown 语法说明 (简体中文版) / ([点击查看快速入门](http://wowubuntu.com/markdown/basic.html))
 ================
@@ -693,7 +689,11 @@ Markdown 会转成：
     &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
     &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
 
-在浏览器里面，这段字串（其实是 `<a href="mailto:address@example.com">address@example.com</a>`）会变成一个可以点击的「address@example.com」链接。
+在浏览器里面，这段字串其实是
+
+	 `<a href="mailto:address@example.com">address@example.com</a>`
+
+会变成一个可以点击的「address@example.com」链接。
 
 （这种作法虽然可以糊弄不少的机器人，但并不能全部挡下来，不过总比什么都不做好些。不管怎样，公开你的信箱终究会引来广告信件的。）
 
