@@ -79,8 +79,12 @@ tags:
 		\e　　　Escape
 		\n　　　换行
 		\r　　　回车
-		\t　　　制表
-		\v　　　制表
+		\t　　　Tab符
+		\v　　　垂直Tab符
+		\f	换页符
 		\\　　　反斜线
+		\u	使用数字指定的Unicode 字符，如\u2000
+		\x	使用十六进制数指定的Unicode 字符,如\xc8
+		\0(zero	空值
 		\nnn　　八进制的ASCII编码
 		\xnnn　 十六进制的ASCII编码
