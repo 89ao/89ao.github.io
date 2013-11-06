@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "关闭MongoDB你需要知道的几件事"
+title: "关于MongoDB你需要知道的几件事"
 categories:
 - Database
 tags:
