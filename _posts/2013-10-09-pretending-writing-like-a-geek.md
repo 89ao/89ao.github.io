@@ -17,10 +17,18 @@ GitHub上找了个[模板](http://webfrogs.me/2012/12/20/use-jekyll/)，花了�
 
 刚开始使用 Markdown 写东西，很不错。语法高亮可以使用 [Pygments](http://pygments.org/) ，[使用介绍在此](https://github.com/mojombo/jekyll/wiki/Liquid-Extensions)。例子效果如下：
 
-{% highlight java linenos %}
-public class HelloWorld {
-    public static void main(String args[]) {
-      System.out.println("Hello World!");
-    }
-}
+{% highlight bash linenos %}
+	#!/bin/bash
+	ps aux |grep -v grep|awk '{print $2}' > pids.txt
+	#for pid in pids.txt
+	echo "" > pd.txt
+	ifconfig |grep inet|grep -v addr:127|awk '{print $2}' > result.txt
+	cat pids.txt|while read line
+	do
+	#echo $line
+	ls -l /proc/$line/cwd |awk '{print $10}'>> pd.txt
+	done
+	cat pd.txt|sort -u|grep -v pid2dir >> result.txt
+	rm pd.txt pids.txt
+	cat result.txt
 {% endhighlight %}
