@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /assets/
+Sitemap: http://89ao.tk/sitemap.xml
