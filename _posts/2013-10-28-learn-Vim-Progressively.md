@@ -4,7 +4,7 @@ title: "简明Vim学习指南"
 categories:
 - Linux
 tags:
-- Vim
+- vim
 
 
 ---

@@ -8,6 +8,9 @@ title: 我的elementaryOS设置
 thread: 246
 categories:
 - linux
+tags:
+- elementaryOS
+
 ---
 
 ###源什么的就别修改了，默认的就是中国的源，速度还不错。

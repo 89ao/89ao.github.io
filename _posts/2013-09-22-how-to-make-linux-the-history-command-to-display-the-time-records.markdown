@@ -11,7 +11,6 @@ categories:
 - shell
 tags:
 - shell
-- bash
 ---
 
 注意：本方法只对bash-3.0以上版本有效

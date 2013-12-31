@@ -8,6 +8,10 @@ title: elementaryOS禁用ipv6
 thread: 245
 categories:
 - linux
+
+tags:
+- elementaryOS
+
 ---
 
 
