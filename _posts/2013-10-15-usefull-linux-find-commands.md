@@ -4,7 +4,6 @@ title: "有用的Linux find命令"
 categories:
 - Linux
 tags:
-- commands
 - shell
 
 

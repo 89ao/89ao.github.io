@@ -4,7 +4,6 @@ title: "过滤文件内容的利器:grep"
 categories:
 - Linux
 tags:
-- commands
 - shell
 
 

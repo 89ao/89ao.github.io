@@ -6,7 +6,6 @@ categories:
 tags:
 - git
 - shell
-- dnspod
 
 ---
 

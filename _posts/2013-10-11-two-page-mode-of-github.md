@@ -8,7 +8,7 @@ title: GitHub的两种pages模式
 categories:
 - Git
 tags:
-- GitHub
+- git
 ---
 
 

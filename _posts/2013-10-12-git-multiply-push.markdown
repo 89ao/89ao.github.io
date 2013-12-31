@@ -8,7 +8,7 @@ title: git同时push到多个仓库
 categories:
 - Git
 tags:
-- GitHub
+- git
 ---
 
 

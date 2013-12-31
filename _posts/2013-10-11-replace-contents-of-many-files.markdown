@@ -9,7 +9,6 @@ categories:
 - linux
 - shell
 tags:
-- sed
 - shell
 ---
 

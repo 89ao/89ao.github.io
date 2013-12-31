@@ -10,8 +10,6 @@ categories:
 - linux
 tags:
 - redhat
-- yum
-- Desktop
 ---
 
 RHEL6在字符模式下安装图形界面

@@ -8,6 +8,7 @@ title: 我的elementaryOS设置
 thread: 246
 categories:
 - linux
+- elementaryOS
 tags:
 - elementaryOS
 

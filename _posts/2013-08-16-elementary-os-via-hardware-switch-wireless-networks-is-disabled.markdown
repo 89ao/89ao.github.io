@@ -8,6 +8,10 @@ title: elementary os 无线网络已通过硬件开关禁用
 thread: 227
 categories:
 - linux
+- elementaryOS
+tags:
+- elementaryOS
+
 ---
 
 ubuntu 12.04 无线网络已通过硬件开关禁用 而我电脑上的无线开关是打开的 灯也是亮着的 在win7 下无线能用
