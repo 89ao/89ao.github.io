@@ -13,23 +13,25 @@ tags:
 
 ## 查看占用
 
-1.CPU占用最多的前10个进程： 
+1. CPU占用最多的前10个进程： 
 
-`ps auxw|head -1;ps auxw|sort -rn -k3|head -10 `
+​	ps auxw|head -1;ps auxw|sort -rn -k3|head -10 
 
-2.内存消耗最多的前10个进程 
+2. 内存消耗最多的前10个进程 
 
-`ps auxw|head -1;ps auxw|sort -rn -k4|head -10 `
+​	ps auxw|head -1;ps auxw|sort -rn -k4|head -10 
 
-3.虚拟内存使用最多的前10个进程 
+3. 虚拟内存使用最多的前10个进程 
 
-`ps auxw|head -1;ps auxw|sort -rn -k5|head -10`
+​	ps auxw|head -1;ps auxw|sort -rn -k5|head -10
 
-4.也可以试试
+4. 也可以试试
 
-`ps auxw --sort=rss`
+​	ps auxw --sort=rss
 
-`ps auxw --sort=%cpu`
+​	ps auxw --sort=%cpu
+
+
 
 
 
@@ -43,7 +45,7 @@ VSZ 进程所使用的虚存的大小
 
 RSS 进程使用的驻留集大小或者是实际内存的大小(RSS is the "resident set size" meaning physical memory used)
 
-TTY 与进程关联的终端（tty）
+**TTY 与进程关联的终端（tty）**
 
 ​    串行端口终端（/dev/ttySn）
 
@@ -55,19 +57,17 @@ TTY 与进程关联的终端（tty）
 
 ​    虚拟终端(/dev/pts/n) 
 
-
-
-STAT 检查的状态：进程状态使用字符表示的，如R（running正在运行或准备运行）、S（sleeping睡眠）、I（idle空闲）、Z (僵死)、D（不可中断的睡眠，通常是I/O）、P（等待交换页）、W（换出,表示当前页面不在内存）、N（低优先级任务）T(terminate终止)、W has no resident pages
-
- 
+**STAT 检查的状态：**
 
 ​    D    不可中断     Uninterruptible sleep (usually IO) 
+
+​	P（等待交换页）
 
 ​    R    正在运行，或在队列中的进程 
 
 ​    S    处于休眠状态 
 
-​    T    停止或被追踪 
+​    T    terminate停止或被追踪 
 
 ​    Z    僵尸进程 
 
