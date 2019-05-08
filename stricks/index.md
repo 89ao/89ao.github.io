@@ -16,9 +16,7 @@ comments: no
 ```shell
 find ./ -name '*.md' | awk -F "." '{print $2}' | xargs -i -t git mv ./{}.md ./{}.markdown
 ```
-`find ./ -name '*.md' | awk -F "." '{print $2}' | xargs -i -t git mv ./{}.md ./{}.markdown`
-
-批量修改文件名
+`批量修改文件名
 
 
 
