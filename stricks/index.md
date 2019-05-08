@@ -5,6 +5,8 @@ comments: no
 
 ---
 
+
+
 此处收集经典好用的Shell技巧，以便查阅分享
 
 闲话不说，Enjoy Shell！~
@@ -14,7 +16,7 @@ comments: no
 ```shell
 find ./ -name '*.md' | awk -F "." '{print $2}' | xargs -i -t git mv ./{}.md ./{}.markdown
 ```
-
+`find ./ -name '*.md' | awk -F "." '{print $2}' | xargs -i -t git mv ./{}.md ./{}.markdown`
 
 批量修改文件名
 
