@@ -31,9 +31,7 @@ tags:
 
    ps auxw --sort=%cpu
 
-  
-
-
+</br>
 
 ## 看看几个参数含义
 
