@@ -53,7 +53,7 @@ tags:
 		font-family: 'Galdeano';
 		font-style: normal;
 		font-weight: 400;
-		src: local('Galdeano Regular'), local('Galdeano-Regular'), url(http://89ao.coding.me/assets/fonts/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');}
+		src: local('Galdeano Regular'), local('Galdeano-Regular'), url(https://89ao.github.io/assets/fonts/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');}
 
 1. 完成！push and view吧！
 

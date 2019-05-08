@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: /:title/
-url: http://89ao.coding.me
+url: https://89ao.github.io
 name: 89Ao
 author: AoGang
 qq: 103230005
@@ -9,7 +9,7 @@ duoshuo: 89ao
 #beian: 浙ICP备12026616号
 #cnzz: 119959
 weibo: 2067815867
-gitcafe: 89ao
+#gitcafe: 89ao
 github: 89ao
 highlighter: true
 safe: true
