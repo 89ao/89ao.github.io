@@ -24,7 +24,7 @@ OS洁癖与性能压榨狂魔。
 
 邮箱：[{{ site.email }}](mailto:{{ site.email }})
 
-Coding : [http://coding.net/{{ site.gitcafe }}](http://coding.net/{{ site.gitcafe }})
+[//]: # Coding : [http://coding.net/{{ site.gitcafe }}](http://coding.net/{{ site.gitcafe }})
 
 GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
 
