@@ -15,21 +15,21 @@ tags:
 
 1. CPU占用最多的前10个进程： 
 
-​	ps auxw|head -1;ps auxw|sort -rn -k3|head -10 
+   ps auxw|head -1;ps auxw|sort -rn -k3|head -10
 
 2. 内存消耗最多的前10个进程 
 
-​	ps auxw|head -1;ps auxw|sort -rn -k4|head -10 
+   ps auxw|head -1;ps auxw|sort -rn -k4|head -10
 
 3. 虚拟内存使用最多的前10个进程 
 
-​	ps auxw|head -1;ps auxw|sort -rn -k5|head -10
+   ps auxw|head -1;ps auxw|sort -rn -k5|head -10
 
 4. 也可以试试
 
-​	ps auxw --sort=rss
+   ps auxw --sort=rss
 
-​	ps auxw --sort=%cpu
+   ps auxw --sort=%cpu
 
 
 
