@@ -24,3 +24,7 @@ tags:
 
 嗯没错，就一篇，就这样吧，呵呵
 
+
+
+![v2-06aef4550005fc3561d43ed2ec2720be_b](../assets/v2-06aef4550005fc3561d43ed2ec2720be_b.jpg)
+
