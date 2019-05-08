@@ -7,7 +7,6 @@ slug: elementary-os-via-hardware-switch-wireless-networks-is-disabled
 title: elementary os 无线网络已通过硬件开关禁用
 thread: 227
 categories:
-- linux
 - elementaryOS
 tags:
 - elementaryOS

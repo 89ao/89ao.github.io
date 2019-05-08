@@ -8,7 +8,7 @@ title: 'Step by Step installation of KVM / RHEVH 3.0 inside VMware Workstation 8
 thread: 198
 categories:
 - linux
-- Virtualization
+
 ---
 
 We require some additional setting to install KVM / RHEVH 3.0  inside VMware Workstation:

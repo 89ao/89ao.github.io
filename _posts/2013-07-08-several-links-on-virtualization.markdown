@@ -7,8 +7,8 @@ slug: several-links-on-virtualization
 title: 关于虚拟化的几个链接
 thread: 203
 categories:
-- linux
-- Virtualization
+- virtualization
+
 ---
 
 # 虚拟化系列-Citrix XenServer 6.1 安装与配置

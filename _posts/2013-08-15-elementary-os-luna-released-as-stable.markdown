@@ -7,7 +7,6 @@ slug: elementary-os-luna-released-as-stable
 title: elementary OS Luna 稳定版发布
 thread: 225
 categories:
-- linux
 - elementaryOS
 
 tags:

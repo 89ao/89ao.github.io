@@ -14,7 +14,7 @@ categories:
 
 【例子】
 
-#ldd `which vsftpd` | grep  libwrap
+	ldd `which vsftpd` | grep  libwrap
 
 只要结果有出现  libwrap.so.0 则表示该服务支持tcpwrapper
 
@@ -22,13 +22,13 @@ categories:
 
 【例子】
 
-#strings  `which portmap` | grep hosts
+	strings  `which portmap` | grep hosts
 
 结果有：
 
-/etc/hosts.allow
-
-/etc/hosts.deny
+	/etc/hosts.allow
+	
+	/etc/hosts.deny
 
 则表示该服务是支持tcpwrapper的。
 

@@ -5,11 +5,11 @@ comments: no
 
 ---
 
-攻城狮一头，目前从事Linux的相关运维。     
+攻城狮一头，PM狗（project）。     
 
 热爱Linux，开源爱好者，喜欢虚拟化，github等。            
 
-电脑洁癖与性能癖。       
+OS洁癖与性能压榨狂魔。       
 
 偶尔微博，偶尔wow。  
 
@@ -24,7 +24,10 @@ comments: no
 
 邮箱：[{{ site.email }}](mailto:{{ site.email }})
 
+Coding : [http://coding.net/{{ site.gitcafe }}](http://coding.net/{{ site.gitcafe }})
+
 GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
+
 
 ----
 

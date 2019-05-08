@@ -7,7 +7,8 @@ slug: vnc-access-esxi
 title: VNC登陆esxi5的笔记
 thread: 115
 categories:
-- linux
+- virtualization
+
 ---
 
 用vclient连接上esxi或者vcenter server 在虚拟机关机的情况下，鼠标右击选择 “Edit settings”；

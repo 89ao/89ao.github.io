@@ -7,7 +7,8 @@ slug: windows-command-open-vmware-vpc
 title: Windows下命令行开启vmware虚拟机
 thread: 119
 categories:
-- linux
+- virtualization
+
 ---
 
 由于本人习惯用vnc连接虚拟机进行操作（在不用ssh的时候），所以觉得vmware workstation的界面开在那里除了占用界面和资源之外没有任何作用，于是想到用命令行开启虚拟机，vnc上去操作这种方法。

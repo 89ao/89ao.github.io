@@ -27,25 +27,6 @@ __配置实例__
 
 
 
-
-## 指导
-
-
-
-
-
-	
-  * [#autoindex autoindex]
-
-	
-  * [#autoindex_exact_size autoindex_exact_size]
-
-	
-  * [#autoindex_localtime autoindex_localtime]
-
-
-
-
 ## autoindex
 
 

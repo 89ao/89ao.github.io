@@ -1,13 +1,16 @@
 ---
-title: Shell Tricks
+title: 脚本秀-Shell Tricks
 layout: page
 comments: no
 
 ---
 
-##此处收集经典好用的Shell技巧，记录以便查阅和分享
+此处收集经典好用的Shell技巧，以便查阅分享
 
-##闲话不说，Enjoy Shell！~
+闲话不说，Enjoy Shell！~
+
+	find ./ -name '*.md' | awk -F "." '{print $2}' | xargs -i -t git mv ./{}.md ./{}.markdown
+批量修改文件名
 
 	rm -rf !(\*.html)   
 删除除了\*.html之外的所有文件

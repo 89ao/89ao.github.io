@@ -7,9 +7,7 @@ slug: elementaryos-disabling-ipv6
 title: elementaryOS禁用ipv6
 thread: 245
 categories:
-- linux
 - elementaryOS
-
 tags:
 - elementaryOS
 
