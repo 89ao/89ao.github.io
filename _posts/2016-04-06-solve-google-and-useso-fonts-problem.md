@@ -19,7 +19,7 @@ tags:
 
 1. 首先找到有哪些引用字体库的文件（其实只有两个css）
 
-    ```
+    ```shell
     viao@MacAo:~/git/89ao % grep -r useso ./
     .//_site/media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
     .//_site/media/css/style.css:@import url(http://fonts.useso.com/css?family=Galdeano|Electrolize|Cuprum);
@@ -47,7 +47,6 @@ tags:
     ```shell
     698* mv ~/Downloads/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff galdeano/v6
     689* cd assets
-    690* ls
     691* mkdir fonts
     692* cd fonts
     693* mkdir -p cuprum/v7/
@@ -61,7 +60,7 @@ tags:
 
 1. 修改第一步中的css文件，把import xxx删掉，添加第二步中获取的内容，将url修改成push之后的url，类似：
 
-    ```shell
+    ```css
     @font-face {
     font-family: 'Galdeano';
     font-style: normal;
@@ -73,11 +72,11 @@ tags:
 
 1. 完成！push and view吧！
 
-		```shell
-	715* git push -u origin coding-pages
-	713* git add .
-	714* git commit -m "modify fonts css"
-	```
-	
-	
+    ```shell
+    715* git push -u origin coding-pages
+    713* git add .
+    714* git commit -m "modify fonts css"
+    ```
+
+  
 
