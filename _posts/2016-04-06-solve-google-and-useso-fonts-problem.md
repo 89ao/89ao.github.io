@@ -19,53 +19,65 @@ tags:
 
 1. 首先找到有哪些引用字体库的文件（其实只有两个css）
 
-    > viao@MacAo:~/git/89ao (coding-pages*%=) % grep -r useso ./
-    >
-    > 
-    >
-    > .//_site/media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
-    > _
-    >
-    > _.//_site/media/css/style.css:@import url(http://fonts.useso.com/css?family=Galdeano|Electrolize|Cuprum);
-    >
-    > 
-    >
-    > ..//media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
+    ```
+    viao@MacAo:~/git/89ao % grep -r useso ./
+    .//_site/media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
+    .//_site/media/css/style.css:@import url(http://fonts.useso.com/css?family=Galdeano|Electrolize|Cuprum);
+    ..//media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
+    ```
+
+    
 
 1. 打开 http://fonts.useso.com/css?family=Galdeano 等链接，会发现形如如下内容：
 
-		> @font-face {
-	> font-family: 'Galdeano';
-	> font-style: normal;
-	> font-weight: 400;
-	> src: local('Galdeano Regular'), local('Galdeano-Regular'), url(http://fonts.gstatic.com/s/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');}
+    ```css
+    @font-face {
+    font-family: 'Galdeano';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Galdeano Regular'), local('Galdeano-Regular'), url(http://fonts.gstatic.com/s/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');}
+    ```
+
+    
 
 1. 下载其中的 http://fonts.gstatic.com/s/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff 等字体文件
 
 1. 字体文件拷贝到自己jekyll的相应目录，算好push之后的url应该是如何的，做相应的规划:
 
-		> 698* mv ~/Downloads/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff galdeano/v6
-	> 689* cd assets
-	> 690* ls
-	> 691* mkdir fonts
-	> 692* cd fonts
-	> 693* mkdir -p cuprum/v7/
-	> 694* mv ~/Downloads/dS-oM09uC7agWFnFSCUGievvDin1pK8aKteLpeZ5c0A.woff cuprum/v7
-	> 695* mkdir -p electrolize/v5/
-	> 696* mv ~/Downloads/DDy9sgU2U7S4xAwH5thnJ7rIa-7acMAeDBVuclsi6Gc.woff electrolize/v5
-	> 697* mkdir -p galdeano/v6/
+    ```shell
+    698* mv ~/Downloads/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff galdeano/v6
+    689* cd assets
+    690* ls
+    691* mkdir fonts
+    692* cd fonts
+    693* mkdir -p cuprum/v7/
+    694* mv ~/Downloads/dS-oM09uC7agWFnFSCUGievvDin1pK8aKteLpeZ5c0A.woff cuprum/v7
+    695* mkdir -p electrolize/v5/
+    696* mv ~/Downloads/DDy9sgU2U7S4xAwH5thnJ7rIa-7acMAeDBVuclsi6Gc.woff electrolize/v5
+    697* mkdir -p galdeano/v6/
+    ```
+
+    
 
 1. 修改第一步中的css文件，把import xxx删掉，添加第二步中获取的内容，将url修改成push之后的url，类似：
 
-		> @font-face {
-	> font-family: 'Galdeano';
-	> font-style: normal;
-	> font-weight: 400;
-	> src: local('Galdeano Regular'), local('Galdeano-Regular'), url(https://89ao.github.io/assets/fonts/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');}
+    ```shell
+    @font-face {
+    font-family: 'Galdeano';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Galdeano Regular'), local('Galdeano-Regular'), url(https://89ao.github.io/assets/fonts/galdeano/v6/XWkZhyfrNgo9X-giTt_ZfXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');}
+    ```
+
+    
 
 1. 完成！push and view吧！
 
-		> 715* git push -u origin coding-pages
-	> 713* git add .
-	> 714* git commit -m "modify fonts css"
+		```shell
+	715* git push -u origin coding-pages
+	713* git add .
+	714* git commit -m "modify fonts css"
+	```
+	
+	
 
