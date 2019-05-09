@@ -19,10 +19,18 @@ tags:
 
 1. 首先找到有哪些引用字体库的文件（其实只有两个css）
 
-		> viao@MacAo:~/git/89ao (coding-pages*%=) % grep -r useso ./
-	> .//_site/media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
-	> .//_site/media/css/style.css:@import url(http://fonts.useso.com/css?family=Galdeano|Electrolize|Cuprum);
-	> ..//media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
+    > viao@MacAo:~/git/89ao (coding-pages*%=) % grep -r useso ./
+    >
+    > 
+    >
+    > .//_site/media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
+    > _
+    >
+    > _.//_site/media/css/style.css:@import url(http://fonts.useso.com/css?family=Galdeano|Electrolize|Cuprum);
+    >
+    > 
+    >
+    > ..//media/css/home.css:@import url(http://fonts.useso.com/css?family=Galdeano);
 
 1. 打开 http://fonts.useso.com/css?family=Galdeano 等链接，会发现形如如下内容：
 
