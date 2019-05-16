@@ -11,7 +11,7 @@ email: 89ao@live.com
 weibo: 2067815867
 #gitcafe: 89ao
 github: 89ao
-highlighter: true
+highlighter: rouge
 safe: true
 paginate: 15
 about: "攻城狮一头，PM狗（project）。	
