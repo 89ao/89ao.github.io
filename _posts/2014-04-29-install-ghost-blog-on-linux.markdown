@@ -10,7 +10,7 @@ tags:
 ---
 
  
-##在Linux上安装Ghost
+## 在Linux上安装Ghost
 
 Ghost是使用Node.js框架编写的。因此，首先你需要在你的Linux系统上安装Node.js框架。确保Node.js的版本为0.10或者更高。接下来，登录入http://ghost.org  (需要注册)，然后下载Ghost的源代码。记着按照下面的步骤安装：
 
@@ -26,7 +26,7 @@ Ghost是使用Node.js框架编写的。因此，首先你需要在你的Linux系
 	sudo cp config.example.js config.js
 	sudo sed -i 's/127.0.0.1/YOUR_IP/g' config.js
 
-##以开发者模式尝试运行Ghost
+## 以开发者模式尝试运行Ghost
 
 搞到这一步，你就可以准备去启动Ghost咯。
 
@@ -44,7 +44,7 @@ Ghost成功运行后，终端中会有以下输出信息，告诉你Ghost正运�
 
 
 
-##以用户身份启动Ghost
+## 以用户身份启动Ghost
 
 在你确认Ghost运行完好后，按下Ctrl+C停用开发者模式下的Ghost。现在你就可以在用户模式下启动Ghost咯。当你以用户模式运行Ghost时，你就可以使用Node.js呼叫forever模块了，forever模块允许你以守护进程运行Ghost，还可以让你以后台进程运行Ghost。
 
