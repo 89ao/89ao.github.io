@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /assets/
+Sitemap: https://89ao.github.io/sitemap.xml
