@@ -1,13 +1,14 @@
 ---
 title: openstack虚拟机限速配置
 date: 2024-12-13 8:0:00 +0800
-lastUpdateTime: 2024-12-13 22:19:00 +0800
+lastUpdateTime: 2024-12-13 23:6:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 tags: 
     - 云计算
     - 技术
 categories: tech
+publish: true
 subtitle: openstack虚拟机限速配置
 ---
     
@@ -62,11 +63,10 @@ nova flavor-key m1.small set quota:vif_outbound_average=10240
 ```
 
 参考官方文档，flavor中支持以下tuning参数：
-Optional metadata keys
+**Optional metadata keys**
 
-|  |  |  |
-| ---------- | ---------- | ---------- |
 | CPU limits | quota:cpu_shares |  |
+| ---------- | ---------- | ---------- |
 |  | quota:cpu_period |  |
 |  | quota:cpu_limit |  |
 |  | quota:cpu_reservation |  |
@@ -87,4 +87,3 @@ Optional metadata keys
 | Random-number | generator	hw_rng:allowed |  |
 |  | hw_rng:rate_bytes |  |
 |  | hw_rng:rate_period |  |
-|  |  |  |
