@@ -1,7 +1,7 @@
 ---
 title: openstack虚拟机限速配置
 date: 2024-12-13 8:0:00 +0800
-lastUpdateTime: 2024-12-14 0:5:00 +0800
+lastUpdateTime: 2024-12-14 0:19:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 layout: post
@@ -11,7 +11,7 @@ tags:
     - 技术
 categories: tech
 publish: true
-subtitle: openstack虚拟机限速配置
+subtitle: OpenStack Virtual Machine Bandwidth Limiting Configuration
 header-img: https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/pic/L3Bob3RvLTE2Njc5ODQzOTA1MzgtM2RlYTdhM2ZlMzNk-15b66a14-2144-8027-9882-d520dac6c005.webp
 ---
     
