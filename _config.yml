@@ -1,8 +1,8 @@
 markdown: kramdown
 permalink: /:title/
 url: https://89ao.github.io
-name: 89Ao
-author: AoGang
+name: MotorAo
+author: Motorao
 qq: 103230005
 email: 89ao@live.com
 #duoshuo: 89ao
@@ -13,7 +13,7 @@ beian: 苏ICP备2022047997号-1
 github: 89ao
 highlighter: rouge
 safe: true
-paginate: 15
+paginate: 20
 about: "攻城狮一头，PM狗（project）。	
 热爱Linux，开源爱好者，喜欢虚拟化，github等。		
 OS洁癖与性能压榨狂魔。  	
