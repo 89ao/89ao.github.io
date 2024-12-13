@@ -7,8 +7,7 @@ slug: rhevm3-2-notes
 title: rhevm3.2笔记
 thread: 200
 categories:
-- virtualization
-
+  - virtualization
 ---
 
 `rhn_register`
@@ -21,7 +20,6 @@ categories:
 
 `rhn-channel --list`
 
-    
     rhn-channel -u <username> -p <password> /
     -c  rhel-x86_64-server-6 /
     -c  jbappplatform-6-x86_64-server-6-rpm /
@@ -31,9 +29,9 @@ categories:
 
 `tar cvf result.tar /dir/`
 
-scp命令未找到`yum install openssh-clients`
+scp 命令未找到`yum install openssh-clients`
 
-挂载nfs失败：`yum install nfs-utils`
+挂载 nfs 失败：`yum install nfs-utils`
 
 `createrepo /tar/dir`
 

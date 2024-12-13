@@ -2,11 +2,9 @@
 layout: post
 title: "自动化部署ESX方案EDA"
 categories:
-- virtualization
+  - virtualization
 tags:
-- vmware
-
-
+  - vmware
 ---
 
 ###你可以在这里下载到这个包：
@@ -57,7 +55,7 @@ When using VLAN's in your environment, follow the next rules:
 
 - make sure the ESX ip addresses are in the SAME ip range as the EDA. very important, it will not work if they're on different subnets.
 
-- only if you can enter a VLAN tag in your BIOS for pxe (like some dell machines can), can you use EDA on a tagged network. in all other cases, you HAVE to use native vlan tagging for pxe boot. that means that when EDA runs on a ESX server, you create a portgroup with no vlan tags and have the physical switches add the tag (called native in Cisco language). the service console portgroup can not be tagged either. if you absolutely cannot have an EDA in your service console network you need to add a second console vswif and remove the first, all from the script. this is possible because once the script starts, the ESX server is running and can be on another subnet than the EDA. we leave the EDA at our customers as a disaster recovery system (or even a quick upgrade system;)* upgrading to U4 by reinstalling it with EDA is much faster than a remediate :)) and it's usually considered part of the management network wether it runs DHCP or not..
+- only if you can enter a VLAN tag in your BIOS for pxe (like some dell machines can), can you use EDA on a tagged network. in all other cases, you HAVE to use native vlan tagging for pxe boot. that means that when EDA runs on a ESX server, you create a portgroup with no vlan tags and have the physical switches add the tag (called native in Cisco language). the service console portgroup can not be tagged either. if you absolutely cannot have an EDA in your service console network you need to add a second console vswif and remove the first, all from the script. this is possible because once the script starts, the ESX server is running and can be on another subnet than the EDA. we leave the EDA at our customers as a disaster recovery system (or even a quick upgrade system;)\* upgrading to U4 by reinstalling it with EDA is much faster than a remediate :)) and it's usually considered part of the management network wether it runs DHCP or not..
 
 - when installing an ESX server, the network gets initiated 3 times before the first reboot. unfortunately the NIC detection routines differ slightly which causes the network order to change. so when pxe starts, your first onboard nic could be considered eth0 while the second step sees it as eth1. in the EDA there's an option to specifically set the ksdevice. you could try changing that from eth0 to eth1 or higher and see if that helps
 

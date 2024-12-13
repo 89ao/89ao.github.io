@@ -15,7 +15,7 @@ name: inverse
     class: center, middle, inverse
     ---
     # MonsterWM
-    
+
     -- 兼谈 Linux 桌面最小化及定制
     
     ~toy

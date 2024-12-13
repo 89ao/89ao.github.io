@@ -10,9 +10,9 @@ tags:
 
 ---
 
-##在ESXi主机上关闭无响应的虚拟机
+## 在ESXi主机上关闭无响应的虚拟机
 
-####适用情况
+#### 适用情况
 
 该方法适用于以下情况:
 
@@ -20,7 +20,7 @@ tags:
 
 *虚拟机无响应且不能停止。
 
-####目的
+#### 目的
 
 这篇文章描述在ESXi环境中如何正确的关闭一台无响应的虚拟机。
 
@@ -28,11 +28,11 @@ tags:
 
 **注意：**如果你尝试查找造成虚拟机无响应的原因，首先应当收集性能变化规律，然后中止虚拟机运行，从而收集更多的故障信息。要获得更多信息，请参考 [Troubleshootingavirtualmachinethathasstoppedresponding:VMMandGuestCPUusagecomparison(1017926)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=1017926) 或者 [Troubleshootingavirtualmachinethathasstoppedresponding(1007819)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=1007819).
 
-####解决方案
+#### 解决方案
 
 **警告：**请严格按照文章中的步骤操作。每一步操作对虚拟机都有一定的影响，所以请不要跳过其中任何一步！
 
-##用vSphereClient关闭虚拟机
+## 用vSphereClient关闭虚拟机
 
 用客户端尝试顺利关闭虚拟机：
 
@@ -48,7 +48,7 @@ tags:
 
 如果虚拟机使用客户端不能正常关机，请选用以下任一种命令行模式。
 
-##安装vSphereCommand-LineInterface工具
+## 安装vSphereCommand-LineInterface工具
 
 vSphereCommand-LineInterface(vCLI)会在本文的某些步骤中用到，所以在使用前请确保你已经正确的安装了它。
 
@@ -62,11 +62,11 @@ vSphereCommand-LineInterface(vCLI)会在本文的某些步骤中用到，所以�
 
 **注意：**对于ESXi4.x和ESX5.0主机，远程命令行接口程序会通过vSphereManagementAssistant(vMA)访问。如果你偏爱这个工具，请在 [vSphereCommand-LineInterfaceInstallationandReferenceGuide](http://www.vmware.com/pdf/vsphere4/r40/vsp_40_vcli.pdf)中参考 _InstallingvMAandRunningCommandsfromvMA_ 。
 
-##确认虚拟机的位置
+## 确认虚拟机的位置
 
 请确认虚拟机是在哪个主机上运行。你可以通过vSphereClient中虚拟机的“摘要”选项卡来查看相关信息。随后将在虚拟机所在的主机上运行相关命令来关闭虚拟机。
 
-###使用ESXi5.0主机的esxcli命令来关闭虚拟机
+### 使用ESXi5.0主机的esxcli命令来关闭虚拟机
 
 `esxcli` 命令能够在本地或远程来关闭运行在ESXi5.0主机上的虚拟机。要获得更多信息，请参考 [vSphereCommand-LineInterfaceReference](http://pubs.vmware.com/vsphere-50/topic/com.vmware.vcli.ref.doc_50/esxcli_vm.html)中_esxclivmCommands_ 章节。
 
@@ -102,9 +102,9 @@ vSphereCommand-LineInterface(vCLI)会在本文的某些步骤中用到，所以�
 
 vim-cmdvmsvc/power.off _VMID_
 
-###使用ESXi命令行工具vim-cmd来关闭虚拟机
+### 使用ESXi命令行工具vim-cmd来关闭虚拟机
 
-##在ESXi主机上发送信号来关闭虚拟机
+## 在ESXi主机上发送信号来关闭虚拟机
 
 虚拟机能够在命令行模式下停止相关进程从而关闭。
 
@@ -163,7 +163,7 @@ vim-cmdvmsvc/power.off _VMID_
 
 9. 等待30秒然后验证进程是否已经结束。
 
-####附加信息
+#### 附加信息
 
 如果使用以上方法均不能关闭虚拟机，则说明问题可能是由于ESXi主机或者它的硬件问题所引起的。
 

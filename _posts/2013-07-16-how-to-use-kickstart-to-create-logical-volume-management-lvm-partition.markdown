@@ -7,30 +7,30 @@ slug: how-to-use-kickstart-to-create-logical-volume-management-lvm-partition
 title: 如何使用 kickstart创建逻辑卷管理（LVM）分区
 thread: 210
 categories:
-- linux
+  - linux
 ---
 
-如果使用 kickstart创建逻辑卷管理（LVM）分区，要在ks.cfg文件的"Disk Partition Information"部分添加以下选项：
+如果使用 kickstart 创建逻辑卷管理（LVM）分区，要在 ks.cfg 文件的"Disk Partition Information"部分添加以下选项：
 
-	#Disk partitioning informationpart
-	pv.<id>
-	volgroup <name> <partition>
-	logvol <mountpoint> –vgname=<volume_group_name> –size=<size> –name=<name>
+    #Disk partitioning informationpart
+    pv.<id>
+    volgroup <name> <partition>
+    logvol <mountpoint> –vgname=<volume_group_name> –size=<size> –name=<name>
 
 注意：
 上 面提到的选项是有先后顺序的。物理卷将先被创建，然后是卷组和逻辑卷。
 
-实例：我的ks脚本这一段如下：
+实例：我的 ks 脚本这一段如下：
 
-	# Partition clearing information
-	clearpart --all
-	#Disk partitioning information
-	part /boot --fstype ext4 --size=256
-	part swap --size=4096
-	part pv.01 --size=1 --grow
-	volgroup vg_root pv.01
-	logvol  / --fstype ext4  --vgname=vg_root  --size=5120  --name=lv_root
-	logvol  /home --fstype ext4 --vgname=vg_root  --size=5120  --name=lv_home
+    # Partition clearing information
+    clearpart --all
+    #Disk partitioning information
+    part /boot --fstype ext4 --size=256
+    part swap --size=4096
+    part pv.01 --size=1 --grow
+    volgroup vg_root pv.01
+    logvol  / --fstype ext4  --vgname=vg_root  --size=5120  --name=lv_root
+    logvol  /home --fstype ext4 --vgname=vg_root  --size=5120  --name=lv_home
 
 更多信息请阅读：
 

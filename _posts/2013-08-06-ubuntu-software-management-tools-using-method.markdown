@@ -16,7 +16,6 @@ categories:
 
 APT全称Advanced Packaging Tool，可以自动下载，配置，安装二进制或者源代码格式的软件包，因此简化了Linux系统上管理软件的过程。现在Debian和其衍生发行版（如Ubuntu）中都包含了APT。APT命令（package 为软件包名称）：
 
-    
     apt-cache search package 搜索包
     apt-cache show package 获取包的相关信息，如说明、大小、版本等
     sudo apt-get install package 安装包
@@ -36,10 +35,8 @@ APT全称Advanced Packaging Tool，可以自动下载，配置，安装二进制
     sudo apt-get clean && sudo apt-get autoclean 清理下载文件的存档
     sudo apt-get check 检查是否有损坏的依赖
 
-
 除了要了解基本的apt指令外，还需要了解下一些与APT相关的文件，具体每个文件作用如下：
 
-    
     /etc/apt/sources.list 设置软件包的获取来源
     /etc/apt/apt.conf apt配置文件
     /etc/apt/apt.conf.d apt的零碎配置文件
@@ -49,12 +46,10 @@ APT全称Advanced Packaging Tool，可以自动下载，配置，安装二进制
     /var/lib/apt/lists 存放已经下载的软件包详细信息
     /var/lib/apt/lists/partial 存放正在下载的软件包详细信息
 
-
 **二、DPKG命令安装**
 
 dpkg是Debian软件包管理器的基础，被用于安装、卸载和供给和.deb软件包相关的信息。dpkg本身是一个底层的工具，本身并不能从远程包仓库下载包以及处理包的依赖的关系，需要将包从远程下载后再安装。DPKG常用命令：
 
-    
     dpkg -i package.deb 安装包
     dpkg -r package 删除包
     dpkg -P package 删除包（包括配置文件）
@@ -65,7 +60,6 @@ dpkg是Debian软件包管理器的基础，被用于安装、卸载和供给和.
     dpkg -l 列出当前已安装的包
     dpkg -c package.deb 列出 deb 包的内容
     dpkg –configure package 配置包
-
 
 注意：更多选项可通过 dpkg -h 查询，有些指令需要超级用户权限才能执行。
 
