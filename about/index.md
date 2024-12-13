@@ -5,13 +5,6 @@ comments: no
 
 ---
 
-攻城狮一头，PM狗（project）。
-
-热爱Linux，开源爱好者，喜欢虚拟化，github等。
-
-OS洁癖与性能压榨狂魔。
-
-偶尔微博，偶尔wow。  
 
 {{site.about}}
 
