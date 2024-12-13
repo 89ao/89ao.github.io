@@ -1,10 +1,11 @@
 ---
 title: openstack虚拟机限速配置
 date: 2024-12-13 8:0:00 +0800
-lastUpdateTime: 2024-12-13 23:47:00 +0800
+lastUpdateTime: 2024-12-14 0:5:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 layout: post
+header-style: text
 tags: 
     - 云计算
     - 技术
@@ -14,11 +15,13 @@ subtitle: openstack虚拟机限速配置
 header-img: https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/pic/L3Bob3RvLTE2Njc5ODQzOTA1MzgtM2RlYTdhM2ZlMzNk-15b66a14-2144-8027-9882-d520dac6c005.webp
 ---
     
-目前与云主机限速相关的内容共有三处：
+> 目前与云主机限速相关的内容共有三处：
 
-1. neutron qos-xxx命令，通过neutron qos的形式为云主机port绑定相应的网络限速策略（对应弹性公网IP）
+## neutron qos-xxx命令
 
-1. 通过flavor对云主机进行默认限速：
+neutron qos-xxx命令，通过neutron qos的形式为云主机port绑定相应的网络限速策略（对应弹性公网IP）
+
+## 通过flavor对云主机进行默认限速：
 
 ```shell
 命令如下：
@@ -39,7 +42,9 @@ nova flavor-key m1.small set quota:vif_outbound_average=10240
 
 ```
 
-1. 云硬盘限速（动态）
+## 云硬盘限速（动态）
+
+
 由于不同规格云硬盘的限速要求差异，云硬盘采用公式进行限速；
 对cinder进行二次开发后，在cinder.conf中配置相应的限速参数，根据创建的云硬盘大小不同，计算出不同的限速值，最后落到libvirt中生效如下：
 
@@ -65,7 +70,9 @@ nova flavor-key m1.small set quota:vif_outbound_average=10240
 ```
 
 参考官方文档，flavor中支持以下tuning参数：
-**Optional metadata keys**
+
+
+**Optional metadata keys: **
 
 | CPU limits | quota:cpu_shares |
 | ---------- | ---------- |
@@ -89,7 +96,3 @@ nova flavor-key m1.small set quota:vif_outbound_average=10240
 | Random-number | generator	hw_rng:allowed |
 |  | hw_rng:rate_bytes |
 |  | hw_rng:rate_period |
-
-再来个截图怎么样：
-
-![](https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/pic/15b66a14-2144-80cb-9f4c-ea3c7ef6bbc5.webp)
