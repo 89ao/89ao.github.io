@@ -1,7 +1,7 @@
 ---
 title: openstack虚拟机限速配置
 date: 2024-12-13 8:0:00 +0800
-lastUpdateTime: 2024-12-13 23:6:00 +0800
+lastUpdateTime: 2024-12-13 23:9:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 tags: 
@@ -65,25 +65,28 @@ nova flavor-key m1.small set quota:vif_outbound_average=10240
 参考官方文档，flavor中支持以下tuning参数：
 **Optional metadata keys**
 
-| CPU limits | quota:cpu_shares |  |
-| ---------- | ---------- | ---------- |
-|  | quota:cpu_period |  |
-|  | quota:cpu_limit |  |
-|  | quota:cpu_reservation |  |
-|  | quota:cpu_quota |  |
-| Disk tuning | quota:disk_read_bytes_sec |  |
-|  | quota:disk_read_iops_sec |  |
-|  | quota:disk_write_bytes_sec |  |
-|  | quota:disk_write_iops_sec |  |
-|  | quota:disk_total_bytes_sec |  |
-|  | quota:disk_total_iops_sec |  |
-| Bandwidth I/O | quota:vif_inbound_average |  |
-|  | quota:vif_inbound_burst |  |
-|  | quota:vif_inbound_peak |  |
-|  | quota:vif_outbound_average |  |
-|  | quota:vif_outbound_burst |  |
-|  | quota:vif_outbound_peak |  |
-| Watchdog behavior | hw:watchdog_action |  |
-| Random-number | generator	hw_rng:allowed |  |
-|  | hw_rng:rate_bytes |  |
-|  | hw_rng:rate_period |  |
+| CPU limits | quota:cpu_shares |
+| ---------- | ---------- |
+|  | quota:cpu_period |
+|  | quota:cpu_limit |
+|  | quota:cpu_reservation |
+|  | quota:cpu_quota |
+| Disk tuning | quota:disk_read_bytes_sec |
+|  | quota:disk_read_iops_sec |
+|  | quota:disk_write_bytes_sec |
+|  | quota:disk_write_iops_sec |
+|  | quota:disk_total_bytes_sec |
+|  | quota:disk_total_iops_sec |
+| Bandwidth I/O | quota:vif_inbound_average |
+|  | quota:vif_inbound_burst |
+|  | quota:vif_inbound_peak |
+|  | quota:vif_outbound_average |
+|  | quota:vif_outbound_burst |
+|  | quota:vif_outbound_peak |
+| Watchdog behavior | hw:watchdog_action |
+| Random-number | generator	hw_rng:allowed |
+|  | hw_rng:rate_bytes |
+|  | hw_rng:rate_period |
+
+再来个截图怎么样：
+
