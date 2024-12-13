@@ -15,7 +15,7 @@ highlighter: rouge
 safe: true
 paginate: 20
 about: "攻城狮一头，PM狗（P for project）,云计算从业9年。	
-热爱Linux，开源爱好者，喜欢虚拟化，github等。		
+热爱Linux，开源爱好者，爱好胶片摄影，户外运动。		
 OS洁癖与性能压榨狂魔。  	
 偶尔微博，偶尔wow。"
 plugins: [jekyll-paginate]
