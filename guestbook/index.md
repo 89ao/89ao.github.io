@@ -5,8 +5,6 @@ comments: yes
 thread: 616
 ---
 
+<img src="https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/pic20241213130436.png" alt="20241213130436" width=60%>
 
-![](http://ww4.sinaimg.cn/mw690/7b405dbbgw1e9ko16tk6dj20pc0fuwhw.jpg)
-
-
-来了，就留下你的足迹吧。
+你好，陌生人。

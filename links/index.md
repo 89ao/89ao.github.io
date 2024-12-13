@@ -4,5 +4,3 @@ layout: page
 comments: yes
 
 ---
-
-<https://89ao.github.io/gallery/>
