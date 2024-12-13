@@ -1,5 +1,6 @@
 markdown: kramdown
 permalink: /:title/
+#permalink: /blog/:year/:month/:day/:title
 url: https://89ao.github.io
 name: 89Ao
 author: AoGang
@@ -26,3 +27,9 @@ defaults:
   values:
     layout: "post"
     author: "89ao"
+auto: true
+pygments: true
+server: true
+exclude:
+- README.md
+- Rakefile
