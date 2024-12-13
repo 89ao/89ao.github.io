@@ -2,8 +2,8 @@ markdown: kramdown
 permalink: /:title/
 url: https://89ao.github.io
 name: MotorAo
-author: Motorao
-#qq: 103230005
+author: motorao
+#qq: xx
 email: 89ao@live.com
 #duoshuo: 89ao
 beian: 苏ICP备2022047997号-1 
@@ -14,7 +14,7 @@ github: 89ao
 highlighter: rouge
 safe: true
 paginate: 20
-about: "攻城狮一头，PM狗（project）。	
+about: "攻城狮一头，PM狗（P for project）,云计算从业9年。	
 热爱Linux，开源爱好者，喜欢虚拟化，github等。		
 OS洁癖与性能压榨狂魔。  	
 偶尔微博，偶尔wow。"
@@ -25,4 +25,4 @@ defaults:
     path: "_posts" # 一个空的字符串代表项目中所有的文件
   values:
     layout: "post"
-    author: "89ao"
+    author: "motorao"
