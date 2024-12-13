@@ -1,7 +1,7 @@
 ---
 title: openstack虚拟机限速配置
 date: 2024-12-13 8:0:00 +0800
-lastUpdateTime: 2024-12-13 23:19:00 +0800
+lastUpdateTime: 2024-12-13 23:39:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 layout: post
@@ -12,7 +12,7 @@ tags:
 categories: tech
 publish: true
 subtitle: openstack虚拟机限速配置
-header-img: static.motorao.cn/assets/pic/L3Bob3RvLTE2Njc5ODQzOTA1MzgtM2RlYTdhM2ZlMzNk-15b66a14-2144-8027-9882-d520dac6c005.webp
+header-img: https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/pic/L3Bob3RvLTE2Njc5ODQzOTA1MzgtM2RlYTdhM2ZlMzNk-15b66a14-2144-8027-9882-d520dac6c005.webp
 ---
     
 目前与云主机限速相关的内容共有三处：
@@ -93,4 +93,4 @@ nova flavor-key m1.small set quota:vif_outbound_average=10240
 
 再来个截图怎么样：
 
-![](static.motorao.cn/assets/pic/15b66a14-2144-80cb-9f4c-ea3c7ef6bbc5.webp)
+![](https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/pic/15b66a14-2144-80cb-9f4c-ea3c7ef6bbc5.webp)
