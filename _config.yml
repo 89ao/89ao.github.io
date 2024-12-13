@@ -2,9 +2,9 @@
 title: MotorAo's Homepage
 SEOTitle: MotorAo 的自留地
 header-img: img/home-bg.jpg
-email: motorao@gmail.com
-description: "这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计"
+email: 89ao@live.com
+description: "你好我是MotorAo，让我们成为更好的人 | 要做在阳光下的人。"
+keyword: "motorao，Linux，云计算，opensource"
 url: "https://89ao.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -13,10 +13,10 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username: 89ao
-zhihu_username: 89ao
+#weibo_username: 89ao
+zhihu_username: motorao
 github_username: 89ao
-twitter_username: 89ao
+#twitter_username: 89ao
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: hux
+disqus_username: 89ao
 
 # Netease settings
 netease_comment: false
@@ -69,12 +69,12 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+#ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
+sidebar-about-description: "做阳光下的人。 <br> Don't be evil."
 sidebar-avatar: https://motorao-1308494644.cos.ap-chengdu.myqcloud.com/assets/picavtar.gif # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
