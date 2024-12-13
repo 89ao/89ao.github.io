@@ -5,7 +5,6 @@ lastUpdateTime: 2024-12-14 0:19:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 layout: post
-header-style: text
 tags: 
     - 云计算
     - 技术
