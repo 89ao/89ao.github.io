@@ -91,12 +91,9 @@ page-mathjax: false
 # Friends
 friends:
   [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
+    { title: "v2ex", href: "https://v2ex.com/" },
+    { title: "Analog Photography", href: "https://www.reddit.com/r/analog/" },
+    { title: "Canon VI L", href: "https://flynngraphics.ca/model-finder/vi-l/" },
+    { title: "rangefinders", href: "https://rangefinderforum.com/" },
+    { title: "Ducati_Panigale_V4(Never owned)", href: "https://en.wikipedia.org/wiki/Ducati_Panigale_V4" },
   ]
