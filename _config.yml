@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: 89ao@live.com
 description: "你好我是MotorAo，让我们成为更好的人 | 要做在阳光下的人。"
 keyword: "motorao，Linux，云计算，opensource"
-url: "https://89ao.github.io" # your host, for absolute URL
+url: "https://motorao.cn" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
