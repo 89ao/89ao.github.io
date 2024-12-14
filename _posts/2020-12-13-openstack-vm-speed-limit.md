@@ -1,7 +1,7 @@
 ---
 title: openstack虚拟机限速配置
 date: 2020-12-13 8:0:00 +0800
-lastUpdateTime: 2024-12-14 15:6:00 +0800
+lastUpdateTime: 2024-12-14 15:11:00 +0800
 name: openstack-vm-speed-limit
 author: "motorao"
 layout: post
