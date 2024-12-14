@@ -5,7 +5,7 @@ categories:
 - Linux
 tags:
 - Linux
-header-img: 
+header-img: 1
 
 ---
 
