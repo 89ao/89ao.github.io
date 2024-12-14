@@ -1,7 +1,7 @@
 ---
 title: 奥林巴斯-半格简史
 date: 2023-9-4 8:0:00 +0800
-lastUpdateTime: 2024-12-14 12:5:00 +0800
+lastUpdateTime: 2024-12-14 12:11:00 +0800
 name: olympus - history of half frame cameras
 author: "motorao"
 layout: post
@@ -14,7 +14,18 @@ publish: true
     
 针对奥林巴斯pen系列相机整理了下，大致的发布时间线如下表格：
 
-![](https://static.motorao.cn/assets/pic/15c66a14-2144-80a5-8892-dc27ec21292f.webp)
+| 年代 | 型号 |  |
+| ---------- | ---------- | ---------- |
+| 1959 | PEN | PEN S |
+| 1961 | PEN EE |  |
+| 1962 | PEN D | PEN EE.S |
+| 1964 | PEN W |  |
+| 1965 | PEN Rapid |  |
+| 1967 | PEN EE.D |  |
+| 1968 | PEN EE.2 | PEN EE.S2 |
+| 1973 | PEN EE.3 |  |
+| 1981 | PEN EF |  |
+| 1963-1970 | PEN F（单反系列） |  |
 
 pen系列大概分为4类：
 
