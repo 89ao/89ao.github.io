@@ -23,7 +23,7 @@
 {% endif %}
 
 {% if include.type == 'post' %}
-{% if page.header-img == "" %}
+{% if page.header-img is not defined %}
 <header class="intro-header style-text" >
 {% else %}
 <header class="intro-header" >
