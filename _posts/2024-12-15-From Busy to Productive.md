@@ -11,8 +11,7 @@ categories: life
 publish: true
 subtitle: Are You Keeping Busy or Being Productive ？
 ---
-    
-[https://www.techtello.com/are-you-keeping-busy-or-being-productive/](https://www.techtello.com/are-you-keeping-busy-or-being-productive/)
+From: [Are You Keeping Busy or Being Productive](https://www.techtello.com/are-you-keeping-busy-or-being-productive/)
 
 ### 你每天结束时的感受如何？
 
