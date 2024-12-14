@@ -1,13 +1,14 @@
 ---
 title: 135相机盘点
 date: 2024-12-14 8:0:00 +0800
-lastUpdateTime: 2024-12-14 9:52:00 +0800
+lastUpdateTime: 2024-12-14 10:1:00 +0800
 name: my-135-frame-cameras
 author: "motorao"
 layout: post
 tags: 
     - 摄影
 categories: life
+publish: true
 subtitle: My 135 Frame Cameras
 ---
     
@@ -15,7 +16,7 @@ subtitle: My 135 Frame Cameras
 
 ![](https://static.motorao.cn/assets/pic/15c66a14-2144-8087-9fd3-d7806214dbb1.webp)
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135506734-1556460704.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135506734-1556460704.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8075-86bf-e7b7f472a4f3.webp)
 
 ### 特点：
 
@@ -31,14 +32,17 @@ subtitle: My 135 Frame Cameras
 
 ### 实拍：
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135524676-1347787204.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135524676-1347787204.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8092-99f3-c9e039c80591.webp)
 
 ## 2. Olympus Pen Fv/Ft
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108145841272-6761851.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108145841272-6761851.jpg)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108145916451-722488998.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108145916451-722488998.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80ab-a99c-f24a6349426c.webp)
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135600961-287814705.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135600961-287814705.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80a5-b217-c54e64f71172.webp)
+
+
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-809a-91c3-e0b6e435eff0.webp)
 
 背后的故事很有意思：放在世博会时间胶囊里的相机！
 
@@ -60,13 +64,15 @@ subtitle: My 135 Frame Cameras
 
 ### 实拍：
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135627824-1244041672.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135627824-1244041672.jpg)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135640375-1652022774.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135640375-1652022774.jpg)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-804f-a96d-c78ba058147d.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-802b-b41b-c6e883a5286f.webp)
 
 ## 3. Olympus XA
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135659562-1149806199.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135659562-1149806199.png)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135707049-2096645086.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135707049-2096645086.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8007-881b-c657bb95a484.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80b7-ae05-dadac6f00edf.webp)
 
 ### 特点：
 
@@ -82,12 +88,13 @@ subtitle: My 135 Frame Cameras
 
 ### 实拍
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135740074-198521129.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135740074-198521129.jpg)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80cb-9655-e46ea7b60e96.webp)
 
 ## 4. Pentax pc35af
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135757109-713411801.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135757109-713411801.png)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135809551-382532397.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135809551-382532397.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-803f-a8e9-f60e6558238b.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8002-8332-f679de505df5.webp)
 
 ### 特点：
 
@@ -103,14 +110,24 @@ subtitle: My 135 Frame Cameras
 
 ### 实拍
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135825194-1692917001.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135825194-1692917001.jpg)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135828657-106903496.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135828657-106903496.jpg)" width="50%" height="50%" />
+
+
+
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8077-9591-f049ffc08847.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-808d-9a41-eeddf89297dd.webp)
 
 ## 5. canon ivsb
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135853123-1493418863.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135853123-1493418863.png)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135908126-1638406284.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135908126-1638406284.png)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135922366-567489085.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135922366-567489085.png)" width="50%" height="50%" />
+[
+](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135853123-1493418863.png)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80a0-a5c4-d22ac1658558.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-802a-a22b-c1933497d775.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8035-8adf-f176259eb416.webp)
 
 ### 特点：
 
@@ -128,14 +145,19 @@ subtitle: My 135 Frame Cameras
 
 ### 实拍：
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135938513-951904628.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135938513-951904628.jpg)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140032168-1511495769.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140032168-1511495769.jpg)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8060-af5e-e89371aea955.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80ea-b562-da3b81ae79ad.webp)
+
+
 
 ## 6. canon vi-l
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140053276-363086893.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140053276-363086893.png)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140105562-924075980.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140105562-924075980.png)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140118037-844402006.png](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140118037-844402006.png)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80e0-a09d-ed33ef0398ad.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80d5-b174-fb520182201e.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8084-95be-d48ec4592bb4.webp)
 
 ### 特点：
 
@@ -153,6 +175,8 @@ subtitle: My 135 Frame Cameras
 
 ### 实拍
 
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140141750-677810272.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140141750-677810272.jpg)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140215502-1048628678.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140215502-1048628678.jpg)" width="50%" height="50%" />
-<img src="[https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140232468-1798315534.jpg](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108140232468-1798315534.jpg)" width="50%" height="50%" />
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-803f-abe0-e9871ce1b387.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-80fb-9fad-cf1cdc1251b5.webp)
+
+![](https://static.motorao.cn/assets/pic/15c66a14-2144-8043-bb1f-cc49365a73b4.webp)
