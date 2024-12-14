@@ -28,14 +28,14 @@
                         <li>
                             <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                         </li>
+                        {% endif %}
+                        {% endfor %}
                         <li>
                             <a href="https://draw.motorao.cn/">Draw</a>
                         </li>
                         <li>
                             <a href="https://vault.motorao.cn/">Vault</a>
                         </li>
-                        {% endif %}
-                        {% endfor %}
                         <li class="search-icon">
                             <a href="javascript:void(0)">
                                 <i class="fa fa-search"></i>
