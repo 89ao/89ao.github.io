@@ -5,6 +5,7 @@ lastUpdateTime: 2025-1-2 18:9:00 +0800
 name: galley-test
 author: "motorao"
 layout: post
+hidden: true
 tags: 
     - 摄影
 categories: life
