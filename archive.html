@@ -29,7 +29,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 					data-encode="{{ tag[0] | strip | url_encode }}" class="tag-button" title="{{ tag[0] }}"
 					rel="{{ tag[1].size }}">
 					{{ tag[0] }}
-					<sup>{{tag[1].size}}</sup>
+					<sup>{{tag[1] | where_exp:"post","post.hidden != true" | size}}</sup>
 				</a>__SEPERATOR__
 				{% endfor %}
 				{% endcapture %}
@@ -42,8 +42,8 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
 				{%- assign _sorted_list = _sorted_list | reverse -%}
 
-				{% unless _article.hidden %}
 				{%- for _article in _sorted_list -%}
+				{% unless _article.hidden %}
 				{%- assign _tags = '' -%}
 				{%- for _tag in _article.tags -%}
 				{%- assign _tag_encode = _tag | strip | url_encode -%}
@@ -80,6 +80,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 					</div>
 					{%- if forloop.last -%}
 				</section>{%- endif -%}
+				{% endunless %}
 				{% endfor %}
 			</div>
 		</div>
