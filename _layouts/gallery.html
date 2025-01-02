@@ -20,7 +20,10 @@ layout: default
                     {% for image in category.images %}
                     <div class="gallery-item">
                         <div class="gallery-image" onclick="toggleZoom(this)">
-                            <img src="{{ image.url }}" alt="{{ image.caption }}">
+                            <img data-src="{{ image.url }}" 
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                                 class="lazy" 
+                                 alt="{{ image.caption }}">
                         </div>
                         {% if image.caption %}
                         <p class="gallery-caption">{{ image.caption }}</p>
@@ -176,6 +179,16 @@ layout: default
     .gallery-image.zoomed .gallery-caption {
         display: none;
     }
+
+    /* 添加图片加载时的过渡效果 */
+    .lazy {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .lazy.loaded {
+        opacity: 1;
+    }
 </style>
 
 <script>
@@ -209,5 +222,49 @@ document.addEventListener('keydown', function(e) {
             toggleZoom(zoomed);
         }
     }
+});
+
+// 懒加载实现
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    let active = false;
+
+    const lazyLoad = function() {
+        if (active === false) {
+            active = true;
+
+            setTimeout(function() {
+                lazyImages.forEach(function(lazyImage) {
+                    if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.add("loaded");
+                        lazyImage.onload = function() {
+                            this.style.opacity = 1;
+                        };
+
+                        lazyImages = lazyImages.filter(function(image) {
+                            return image !== lazyImage;
+                        });
+
+                        if (lazyImages.length === 0) {
+                            document.removeEventListener("scroll", lazyLoad);
+                            window.removeEventListener("resize", lazyLoad);
+                            window.removeEventListener("orientationchange", lazyLoad);
+                        }
+                    }
+                });
+
+                active = false;
+            }, 200);
+        }
+    };
+
+    // 添加各种事件监听
+    document.addEventListener("scroll", lazyLoad);
+    window.addEventListener("resize", lazyLoad);
+    window.addEventListener("orientationchange", lazyLoad);
+    
+    // 初始加载
+    lazyLoad();
 });
 </script> 
