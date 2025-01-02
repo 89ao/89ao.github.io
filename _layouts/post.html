@@ -61,6 +61,87 @@ layout: default
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <!-- 网易云跟帖 评论框 end -->
                 {% endif %}
+
+                <style>
+                    /* 文章中的图片样式 */
+                    .post-container img {
+                        cursor: pointer;
+                        transition: transform 0.3s ease;
+                        max-width: 100%;
+                        height: auto;
+                        display: block;
+                        margin: 20px auto;
+                    }
+
+                    .post-container img:hover {
+                        transform: scale(1.02);
+                    }
+
+                    /* 放大状态的样式 */
+                    .post-image-zoomed {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.9);
+                        z-index: 1000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                    }
+
+                    .post-image-zoomed img {
+                        max-width: 90%;
+                        max-height: 90vh;
+                        width: auto;
+                        height: auto;
+                        object-fit: contain;
+                        transform: none;
+                        margin: 0;
+                    }
+                </style>
+
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // 为文章中的所有图片添加点击事件
+                    document.querySelectorAll('.post-container img').forEach(function(img) {
+                        img.addEventListener('click', function() {
+                            if (!this.parentElement.classList.contains('post-image-zoomed')) {
+                                // 创建放大查看的容器
+                                const zoomContainer = document.createElement('div');
+                                zoomContainer.className = 'post-image-zoomed';
+                                
+                                // 克隆图片
+                                const clonedImg = this.cloneNode(true);
+                                zoomContainer.appendChild(clonedImg);
+                                
+                                // 添加到页面
+                                document.body.appendChild(zoomContainer);
+                                document.body.style.overflow = 'hidden';
+                                
+                                // 点击关闭
+                                zoomContainer.addEventListener('click', function() {
+                                    document.body.style.overflow = '';
+                                    this.remove();
+                                });
+                            }
+                        });
+                    });
+
+                    // ESC 键关闭放大的图片
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape') {
+                            const zoomed = document.querySelector('.post-image-zoomed');
+                            if (zoomed) {
+                                document.body.style.overflow = '';
+                                zoomed.remove();
+                            }
+                        }
+                    });
+                });
+                </script>
             </div>  
 
     <!-- Side Catalog Container -->
