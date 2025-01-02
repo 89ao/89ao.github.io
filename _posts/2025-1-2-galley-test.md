@@ -1,13 +1,14 @@
 ---
 title: 相册测试
 date: 2025-1-2 8:0:00 +0800
-lastUpdateTime: 2025-1-2 17:33:00 +0800
+lastUpdateTime: 2025-1-2 17:36:00 +0800
 name: galley-test
 author: "motorao"
 layout: post
 tags: 
     - 摄影
 categories: life
+publish: true
 subtitle: test gallery layout
 ---
     
