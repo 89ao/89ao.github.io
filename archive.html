@@ -20,7 +20,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 			<div id='tag_cloud' class="tags tags-sup js-tags">
 				<a class="tag-button--all" data-encode="">
 					Show All
-					<sup>{{site.posts.size}}</sup>
+					<sup>{{site.posts | where_exp:"post","post.hidden != true" | size}}</sup>
 				</a>
 
 				{% capture tags %}
@@ -42,7 +42,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
 				{%- assign _sorted_list = _sorted_list | reverse -%}
 
-
+				{% unless _article.hidden %}
 				{%- for _article in _sorted_list -%}
 				{%- assign _tags = '' -%}
 				{%- for _tag in _article.tags -%}
