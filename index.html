@@ -4,6 +4,7 @@ description: "「当“现在”说出口，它已经变成了过去」"
 ---
 
 {% for post in paginator.posts %}
+{% unless post.hidden %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -27,6 +28,7 @@ description: "「当“现在”说出口，它已经变成了过去」"
     </p>
 </div>
 <hr>
+{% endunless %}
 {% endfor %}
 
 <!-- Pager -->
