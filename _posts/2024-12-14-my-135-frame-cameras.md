@@ -113,8 +113,7 @@ publish: true
 
 ![](https://static.motorao.cn/assets/pic/15c66a14-2144-808d-9a41-eeddf89297dd.webp)
 
-## 5. canon ivsb[
-](https://img2024.cnblogs.com/blog/2299242/202411/2299242-20241108135853123-1493418863.png)
+## 5. canon ivsb
 
 ![](https://static.motorao.cn/assets/pic/15c66a14-2144-80a0-a5c4-d22ac1658558.webp)
 
