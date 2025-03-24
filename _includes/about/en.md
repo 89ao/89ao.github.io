@@ -11,7 +11,8 @@ Lifelong learner. Graduated in Network Engineering, returning to pursue Engineer
 
 #### <u>Travels ✈️</u>
 When exposed to unfamiliar environments, the human brain activates more neural network connections. Work tills the soil of reality while travel pioneers the wilderness of the mind – seemingly opposing forces that compose the complete rhythm of modern life.  
-Overworking resembles over-tightened violin strings, while perpetual travel is like a bow without rosin. Their relationship mirrors the rhythm of breathing – the vital energy circulates through these alternating inhalations and exhalations.
+Overworking resembles over-tightened violin strings, while perpetual travel is like a bow without rosin.
+Their relationship mirrors the rhythm of breathing – the vital energy circulates through these alternating inhalations and exhalations.
 
 **I embrace Engineer Culture:**
 
