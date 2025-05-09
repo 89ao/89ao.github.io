@@ -1,7 +1,7 @@
 ---
 title: 开源许可证指南
 date: 2025-4-10 8:0:00 +0800
-lastUpdateTime: 2025-5-9 17:59:00 +0800
+lastUpdateTime: 2025-5-9 18:24:00 +0800
 name: opensource license guideance
 author: "motorao"
 layout: post
