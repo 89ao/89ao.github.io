@@ -1,7 +1,7 @@
 ---
 title: 自建drawio记录
 date: 2025-4-10 8:0:00 +0800
-lastUpdateTime: 2025-5-9 18:20:00 +0800
+lastUpdateTime: 2025-5-9 18:25:00 +0800
 name: draw_io selfhost tips
 author: "motorao"
 layout: post
