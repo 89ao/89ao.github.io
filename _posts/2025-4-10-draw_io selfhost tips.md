@@ -1,7 +1,7 @@
 ---
 title: 自建drawio记录
 date: 2025-4-10 8:0:00 +0800
-lastUpdateTime: 2025-5-9 18:25:00 +0800
+lastUpdateTime: 2025-5-11 22:19:00 +0800
 name: draw_io selfhost tips
 author: "motorao"
 layout: post
@@ -9,9 +9,12 @@ tags:
     - 优化
     - 容器
 categories: life
-subtitle: self hosted drawio mark
+publish: true
+subtitle: Draw.io self-hosted tips
 ---
     
+# 配置
+
 首先看docker-compose.yaml
 
 ```docker
@@ -30,6 +33,8 @@ services:
     volumes:
          - ./drawiojs/PreConfig.js:/usr/local/tomcat/webapps/draw/js/PreConfig.js
 ```
+
+# 优化：
 
 由于在客户端打开的时候，会因为几个json文件太大导致打开的太慢，因此将整个/js/的文件迁移到cos桶中，下载的速度由30s→3s。（cos开启防盗链避免流量浪费）
 
