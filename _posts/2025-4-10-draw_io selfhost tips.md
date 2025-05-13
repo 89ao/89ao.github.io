@@ -1,7 +1,7 @@
 ---
 title: 自建drawio记录
 date: 2025-4-10 8:0:00 +0800
-lastUpdateTime: 2025-5-11 22:19:00 +0800
+lastUpdateTime: 2025-5-13 19:12:00 +0800
 name: draw_io selfhost tips
 author: "motorao"
 layout: post
@@ -13,6 +13,10 @@ publish: true
 subtitle: Draw.io self-hosted tips
 ---
     
+ 
+
+> [Draw.io](http://draw.io/) 是一款强大的开源流程图和图表绘制工具，支持在线使用和本地部署，广泛用于创建各种类型的技术和业务图表。自从挺多服务都开始本地部署了之后，就更倾向于把服务控制在自己手上，因此看了下文档，Drawio还是比较容易本地部署的，只是在访问的时候，由于带宽的原因会有一些大元素加载的比较慢，需要用cos加速一下。
+
 # 配置
 
 首先看docker-compose.yaml
