@@ -727,6 +727,7 @@ img.shadow {
 }
 select {
   -webkit-appearance: none;
+  appearance: none;
   margin-top: 15px;
   color: #337ab7;
   border-color: #337ab7;
@@ -1101,6 +1102,115 @@ samp {
     transform: translate3d(0, 100%, 0);
   }
 }
+
+/* Tools dropdown hover functionality - Override Bootstrap defaults */
+.navbar-custom .navbar-nav .tools-dropdown .dropdown-menu {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  min-width: 120px;
+  margin-top: 0;
+}
+
+.navbar-custom .navbar-nav .tools-dropdown .dropdown-menu li a {
+  color: #ffffff !important;
+  padding: 8px 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: all 0.25s;
+  background-color: transparent !important;
+}
+
+.navbar-custom .navbar-nav .tools-dropdown .dropdown-menu li a:hover,
+.navbar-custom .navbar-nav .tools-dropdown .dropdown-menu li a:focus {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.navbar-custom .tools-dropdown .caret {
+  margin-left: 5px;
+}
+
+/* Support for invert navbar */
+.navbar-custom.invert .navbar-nav .tools-dropdown .dropdown-menu {
+  border: 1px solid rgba(64, 64, 64, 0.3);
+  background-color: transparent !important;
+}
+
+.navbar-custom.invert .navbar-nav .tools-dropdown .dropdown-menu li a {
+  color: #404040 !important;
+  background-color: transparent !important;
+}
+
+.navbar-custom.invert .navbar-nav .tools-dropdown .dropdown-menu li a:hover,
+.navbar-custom.invert .navbar-nav .tools-dropdown .dropdown-menu li a:focus {
+  color: #0085a1 !important;
+  background-color: rgba(0, 133, 161, 0.1) !important;
+}
+
+/* Mobile responsive for tools dropdown */
+@media (max-width: 767px) {
+  .navbar-custom .navbar-nav .tools-dropdown .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent !important;
+    border: 0;
+    box-shadow: none;
+  }
+  
+  .navbar-custom .navbar-nav .tools-dropdown .dropdown-menu li a {
+    padding: 5px 15px 5px 25px;
+    line-height: 20px;
+    background-color: transparent !important;
+  }
+}
+
+/* Override Bootstrap dropdown behavior for hover */
+.navbar-custom .tools-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-custom .navbar-nav .tools-dropdown .dropdown-menu {
+    background-color: transparent !important;
+  }
+  
+  .navbar-custom.is-fixed .navbar-nav .tools-dropdown .dropdown-menu {
+    background-color: transparent !important;
+    border: 1px solid rgba(64, 64, 64, 0.3);
+  }
+  
+  .navbar-custom.is-fixed .navbar-nav .tools-dropdown .dropdown-menu li a {
+    color: #404040 !important;
+    background-color: transparent !important;
+  }
+  
+  .navbar-custom.is-fixed .navbar-nav .tools-dropdown .dropdown-menu li a:hover,
+  .navbar-custom.is-fixed .navbar-nav .tools-dropdown .dropdown-menu li a:focus {
+    color: #0085a1 !important;
+    background-color: rgba(0, 133, 161, 0.1) !important;
+  }
+}
+
+/* Global override for any dropdown menu in tools dropdown */
+.dropdown-menu {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Specific override for Bootstrap dropdown menus */
+.navbar .dropdown-menu,
+.navbar-nav .dropdown-menu,
+.nav .dropdown-menu {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
 .intro-header {
   background: no-repeat center center;
   background-color: #a3a3a3;

@@ -36,11 +36,14 @@
                         <li>
                             <a href="{{ site.baseurl }}/gallery/">Gallery</a>
                         </li>
-                        <li>
-                            <a href="https://draw.motorao.cn/">Draw</a>
-                        </li>
-                        <li>
-                            <a href="https://vault.motorao.cn/">Vault</a>
+                        <li class="dropdown tools-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                TOOLS <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://draw.motorao.cn/">Draw</a></li>
+                                <li><a href="https://vault.motorao.cn/">Vault</a></li>
+                            </ul>
                         </li>
                         <li class="search-icon">
                             <a href="javascript:void(0)">
@@ -106,4 +109,70 @@
             if (e.target.className == 'icon-bar') return;
             __HuxNav__.close();
         })
+
+        // Tools dropdown hover functionality - Fixed compatibility issues
+        var $toolsDropdown = document.querySelector('.tools-dropdown');
+        if ($toolsDropdown) {
+            var $dropdownMenu = $toolsDropdown.querySelector('.dropdown-menu');
+            var $toolsToggle = $toolsDropdown.querySelector('.dropdown-toggle');
+            var hoverTimer;
+            
+            // Set TOOLS button styles
+            if ($toolsToggle) {
+                $toolsToggle.style.setProperty('background-color', 'transparent', 'important');
+                
+                // Add hover effect that matches other nav items
+                $toolsToggle.addEventListener('mouseenter', function() {
+                    this.style.setProperty('color', 'rgba(255, 255, 255, 0.8)', 'important');
+                });
+                
+                $toolsToggle.addEventListener('mouseleave', function() {
+                    this.style.setProperty('color', '#ffffff', 'important');
+                });
+            }
+            
+            // Set dropdown menu styles (IE-compatible approach)
+            if ($dropdownMenu) {
+                // Set dropdown menu container styles
+                $dropdownMenu.style.setProperty('background-color', 'transparent', 'important');
+                $dropdownMenu.style.setProperty('min-width', '150px', 'important');
+                $dropdownMenu.style.setProperty('width', '150px', 'important');
+                
+                // Style dropdown items
+                var $dropdownItems = $dropdownMenu.querySelectorAll('li a');
+                for (var i = 0; i < $dropdownItems.length; i++) {
+                    var item = $dropdownItems[i];
+                    // Set basic styles
+                    item.style.setProperty('background-color', 'transparent', 'important');
+                    item.style.setProperty('color', '#ffffff', 'important');
+                    item.style.setProperty('text-align', 'center', 'important');
+                    item.style.setProperty('padding', '10px 20px', 'important');
+                    item.style.setProperty('display', 'block', 'important');
+                    item.style.setProperty('width', '100%', 'important');
+                    
+                    // Add hover effects using closure to avoid variable scope issues
+                    (function(currentItem) {
+                        currentItem.addEventListener('mouseenter', function() {
+                            this.style.setProperty('background-color', 'rgba(255, 255, 255, 0.2)', 'important');
+                        });
+                        
+                        currentItem.addEventListener('mouseleave', function() {
+                            this.style.setProperty('background-color', 'transparent', 'important');
+                        });
+                    })(item);
+                }
+            }
+            
+            // Dropdown hover functionality
+            $toolsDropdown.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimer);
+                $toolsDropdown.classList.add('open');
+            });
+            
+            $toolsDropdown.addEventListener('mouseleave', function() {
+                hoverTimer = setTimeout(function() {
+                    $toolsDropdown.classList.remove('open');
+                }, 150);
+            });
+        }
     </script>
