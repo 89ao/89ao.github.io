@@ -1,7 +1,7 @@
 ---
 title: MacOS关盖休眠设置
 date: 2025-7-23 8:0:00 +0800
-lastUpdateTime: 2025-8-2 13:8:00 +0800
+lastUpdateTime: 2025-8-2 13:10:00 +0800
 name: hibernatemode of macos
 author: "motorao"
 layout: post
@@ -196,7 +196,7 @@ print("Hammerspoon config loaded")
 
 
 
-配置在[这里](https://github.com/89ao/.hammerspoon/commit/1b70ad584619dbe0422372e7af2ebacb98230c71)：undefined
+配置在这里：[update caffine by power state](https://github.com/89ao/.hammerspoon/commit/1b70ad584619dbe0422372e7af2ebacb98230c71)
 
 
 
