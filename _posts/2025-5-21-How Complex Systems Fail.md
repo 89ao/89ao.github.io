@@ -1,7 +1,7 @@
 ---
 title: 复杂系统是如何失效的
 date: 2025-5-21 8:0:00 +0800
-lastUpdateTime: 2025-8-12 17:27:00 +0800
+lastUpdateTime: 2025-8-12 17:28:00 +0800
 name: How Complex Systems Fail
 author: "motorao"
 layout: post
@@ -13,7 +13,7 @@ publish: true
 subtitle: How Complex Systems Fail
 ---
     
-### How Complex Systems Fail - 复杂系统是如何失效的
+# How Complex Systems Fail - 复杂系统是如何失效的
 
 *(Being a Short Treatise on the Nature of Failure; How Failure is Evaluated; How Failure is Attributed to Proximate Cause; and the Resulting New Understanding of Patient Safety)*
 
