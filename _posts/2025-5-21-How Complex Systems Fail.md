@@ -1,7 +1,7 @@
 ---
 title: 复杂系统是如何失效的
 date: 2025-5-21 8:0:00 +0800
-lastUpdateTime: 2025-8-12 17:24:00 +0800
+lastUpdateTime: 2025-8-12 17:27:00 +0800
 name: How Complex Systems Fail
 author: "motorao"
 layout: post
@@ -13,17 +13,17 @@ publish: true
 subtitle: How Complex Systems Fail
 ---
     
-### How Complex Systems Fail复杂系统是如何失效的
+### How Complex Systems Fail - 复杂系统是如何失效的
 
 *(Being a Short Treatise on the Nature of Failure; How Failure is Evaluated; How Failure is Attributed to Proximate Cause; and the Resulting New Understanding of Patient Safety)*
 
 *（一篇关于故障本质、故障评估方式、故障近因归因以及由此产生的对患者安全的新认识的简短论文）*
 
-Richard I. Cook, MD医学博士理查德·I·库克
+> Richard I. Cook, MD医学博士理查德·I·库克
 
-Cognitive Technologies Labratory认知技术实验室
+> Cognitive Technologies Labratory认知技术实验室
 
-University of Chicago芝加哥大学
+> University of Chicago芝加哥大学
 
 1. [Complex systems are intrinsically hazardous systems.复杂系统本质上是危险系统。](https://how.complexsystems.fail/#1)
 All of the interesting systems (e.g. transportation, healthcare, power generation) are inherently and unavoidably hazardous by the own nature. The frequency of hazard exposure can sometimes be changed but the processes involved in the system are themselves intrinsically and irreducibly hazardous. It is the presence of these hazards that drives the creation of defenses against hazard that characterize these systems.所有有趣的系统（例如交通、医疗保健、发电系统）本质上都不可避免地具有危险性。接触危险的频率有时可以改变，但系统中涉及的过程本身就具有内在且无法降低的危险性。正是这些危险的存在促使人们创建针对危险的防御措施，而这些防御措施正是这些系统的特征。
