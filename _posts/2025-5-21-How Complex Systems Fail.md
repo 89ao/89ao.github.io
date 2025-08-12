@@ -8,7 +8,7 @@ layout: post
 tags: 
     - SRE
     - 可靠性
-categories: life
+categories: tech
 publish: true
 subtitle: How Complex Systems Fail
 ---
