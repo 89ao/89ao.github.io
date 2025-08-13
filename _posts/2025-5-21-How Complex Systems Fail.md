@@ -13,8 +13,6 @@ publish: true
 subtitle: How Complex Systems Fail
 ---
     
-# How Complex Systems Fail - 复杂系统是如何失效的
-
 > Being a Short Treatise on the Nature of Failure; How Failure is Evaluated; How Failure is Attributed to Proximate Cause; and the Resulting New Understanding of Patient Safety
 > 一篇关于故障本质、故障评估方式、故障近因归因以及由此产生的对患者安全的新认识的论文
 
