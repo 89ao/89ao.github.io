@@ -1,7 +1,7 @@
 ---
-title: **Clawdbot**安装手册（qwen+iMessage）
+title: Clawdbot安装手册（qwen+iMessage）
 date: 2026-1-27 8:0:00 +0800
-lastUpdateTime: 2026-1-27 19:26:00 +0800
+lastUpdateTime: 2026-1-27 19:28:00 +0800
 name: clawdbot install guide
 author: "motorao"
 layout: post
