@@ -1,7 +1,7 @@
 ---
 title: Clawdbot安装手册（QWEN+iMessage）
 date: 2026-1-27 8:0:00 +0800
-lastUpdateTime: 2026-1-28 10:42:00 +0800
+lastUpdateTime: 2026-1-28 10:43:00 +0800
 name: clawdbot install guide
 author: "motorao"
 layout: post
@@ -32,7 +32,7 @@ Clawdbot 是一个功能强大的个人助手和自动化工具，能够与您�
 
 ### 1. 安装npm+node
 
-clawdbot由nodejs编写，因此首先确保系统已安装 Node.js 和 npm：
+Clawdbot由nodejs编写，因此首先确保系统已安装 Node.js 和 npm：
 
 ```bash
 # Download and install nvm:
@@ -59,7 +59,7 @@ npm -v # Should print "11.6.2".
 
 * 在手机端将这个iMessage地址加入通讯录联系人
 
-### 3. qwen账号准备
+### 3. QWEN账号准备
 
 注册好 [https://chat.qwen.ai/](https://chat.qwen.ai/) 并登陆，以便后续直接调用OAuth认证。
 
