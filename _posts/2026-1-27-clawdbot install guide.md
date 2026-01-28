@@ -1,19 +1,20 @@
 ---
 title: Clawdbot安装手册（QWEN+iMessage）
 date: 2026-1-27 8:0:00 +0800
-lastUpdateTime: 2026-1-28 10:4:00 +0800
+lastUpdateTime: 2026-1-28 10:42:00 +0800
 name: clawdbot install guide
 author: "motorao"
 layout: post
 tags: 
     - AI
     - MacOS
-categories: life
+    - 技术
+categories: tech
 publish: true
-subtitle: clawdbot install tutorial
+subtitle: clawdbot install tutorial using QWEN & iMessage
 ---
     
-# Clawdbot 安装手册
+# Clawdbot 安装手册（QWEN+iMessage）
 
 ## 简介
 
