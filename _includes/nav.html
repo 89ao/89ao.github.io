@@ -1,4 +1,24 @@
 <!-- Navigation -->
+<style>
+    /* 禁用 dropdown toggle 的 hover 颜色淡化（用背景 pill 高亮代替） */
+    .navbar-custom .nav > li.gallery-dropdown > a.dropdown-toggle:hover,
+    .navbar-custom .nav > li.gallery-dropdown > a.dropdown-toggle:focus,
+    .navbar-custom .nav > li.tools-dropdown > a.dropdown-toggle:hover,
+    .navbar-custom .nav > li.tools-dropdown > a.dropdown-toggle:focus {
+        color: #ffffff !important;
+    }
+    /* 滚动后（is-fixed）和 invert 模式：维持深色 */
+    .navbar-custom.is-fixed .nav > li.gallery-dropdown > a.dropdown-toggle:hover,
+    .navbar-custom.is-fixed .nav > li.gallery-dropdown > a.dropdown-toggle:focus,
+    .navbar-custom.is-fixed .nav > li.tools-dropdown > a.dropdown-toggle:hover,
+    .navbar-custom.is-fixed .nav > li.tools-dropdown > a.dropdown-toggle:focus,
+    .navbar-custom.invert .nav > li.gallery-dropdown > a.dropdown-toggle:hover,
+    .navbar-custom.invert .nav > li.gallery-dropdown > a.dropdown-toggle:focus,
+    .navbar-custom.invert .nav > li.tools-dropdown > a.dropdown-toggle:hover,
+    .navbar-custom.invert .nav > li.tools-dropdown > a.dropdown-toggle:focus {
+        color: #404040 !important;
+    }
+</style>
 {% if page.nav-style == "invert" or page.header-style == "text" %}
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
     {% else %}
@@ -33,8 +53,16 @@
                         </li>
                         {% endif %}
                         {% endfor %}
-                        <li>
-                            <a href="{{ site.baseurl }}/gallery/">Gallery</a>
+                        <li class="dropdown gallery-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Gallery <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                {% assign gallery_years = site.gallery | sort: 'year' | reverse %}
+                                {% for g in gallery_years %}
+                                <li><a href="{{ site.baseurl }}/gallery/#{{ g.year }}">{{ g.year }}</a></li>
+                                {% endfor %}
+                            </ul>
                         </li>
                         <li class="dropdown tools-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -110,69 +138,72 @@
             __HuxNav__.close();
         })
 
-        // Tools dropdown hover functionality - Fixed compatibility issues
-        var $toolsDropdown = document.querySelector('.tools-dropdown');
-        if ($toolsDropdown) {
-            var $dropdownMenu = $toolsDropdown.querySelector('.dropdown-menu');
-            var $toolsToggle = $toolsDropdown.querySelector('.dropdown-toggle');
+        // Helper: setup nav dropdown with hover and styling
+        function setupNavDropdown(selector) {
+            var $dropdown = document.querySelector(selector);
+            if (!$dropdown) return;
+            var $menu = $dropdown.querySelector('.dropdown-menu');
+            var $toggle = $dropdown.querySelector('.dropdown-toggle');
             var hoverTimer;
-            
-            // Set TOOLS button styles
-            if ($toolsToggle) {
-                $toolsToggle.style.setProperty('background-color', 'transparent', 'important');
-                
-                // Add hover effect that matches other nav items
-                $toolsToggle.addEventListener('mouseenter', function() {
-                    this.style.setProperty('color', 'rgba(255, 255, 255, 0.8)', 'important');
+
+            if ($toggle) {
+                $toggle.style.setProperty('background-color', 'transparent', 'important');
+                $toggle.style.setProperty('border-radius', '4px', 'important');
+                $toggle.style.setProperty('transition', 'background-color 0.2s ease', 'important');
+                // hover 用背景高亮（pill 效果），与下拉菜单项 hover 风格一致
+                // 中性灰色叠加：深色背景上显浅，浅色背景上显深，两种 navbar 状态都清晰
+                $toggle.addEventListener('mouseenter', function() {
+                    this.style.setProperty('background-color', 'rgba(128, 128, 128, 0.25)', 'important');
                 });
-                
-                $toolsToggle.addEventListener('mouseleave', function() {
-                    this.style.setProperty('color', '#ffffff', 'important');
+                $toggle.addEventListener('mouseleave', function() {
+                    this.style.setProperty('background-color', 'transparent', 'important');
                 });
             }
-            
-            // Set dropdown menu styles (IE-compatible approach)
-            if ($dropdownMenu) {
-                // Set dropdown menu container styles
-                $dropdownMenu.style.setProperty('background-color', 'transparent', 'important');
-                $dropdownMenu.style.setProperty('min-width', '150px', 'important');
-                $dropdownMenu.style.setProperty('width', '150px', 'important');
-                
-                // Style dropdown items
-                var $dropdownItems = $dropdownMenu.querySelectorAll('li a');
-                for (var i = 0; i < $dropdownItems.length; i++) {
-                    var item = $dropdownItems[i];
-                    // Set basic styles
+
+            if ($menu) {
+                // 实底深色背景，避免菜单展开到白底区域时白字不可见
+                $menu.style.setProperty('background-color', 'rgba(34, 34, 34, 0.96)', 'important');
+                $menu.style.setProperty('border', '1px solid rgba(255, 255, 255, 0.12)', 'important');
+                $menu.style.setProperty('border-radius', '4px', 'important');
+                $menu.style.setProperty('box-shadow', '0 6px 18px rgba(0, 0, 0, 0.35)', 'important');
+                $menu.style.setProperty('min-width', '150px', 'important');
+                $menu.style.setProperty('width', '150px', 'important');
+                $menu.style.setProperty('padding', '6px 0', 'important');
+                $menu.style.setProperty('margin-top', '0', 'important');
+
+                var items = $menu.querySelectorAll('li a');
+                for (var i = 0; i < items.length; i++) {
+                    var item = items[i];
                     item.style.setProperty('background-color', 'transparent', 'important');
                     item.style.setProperty('color', '#ffffff', 'important');
                     item.style.setProperty('text-align', 'center', 'important');
                     item.style.setProperty('padding', '10px 20px', 'important');
                     item.style.setProperty('display', 'block', 'important');
                     item.style.setProperty('width', '100%', 'important');
-                    
-                    // Add hover effects using closure to avoid variable scope issues
-                    (function(currentItem) {
-                        currentItem.addEventListener('mouseenter', function() {
-                            this.style.setProperty('background-color', 'rgba(255, 255, 255, 0.2)', 'important');
+                    item.style.setProperty('font-weight', '500', 'important');
+                    item.style.setProperty('letter-spacing', '0.5px', 'important');
+                    (function(el) {
+                        el.addEventListener('mouseenter', function() {
+                            this.style.setProperty('background-color', 'rgba(255, 255, 255, 0.12)', 'important');
                         });
-                        
-                        currentItem.addEventListener('mouseleave', function() {
+                        el.addEventListener('mouseleave', function() {
                             this.style.setProperty('background-color', 'transparent', 'important');
                         });
                     })(item);
                 }
             }
-            
-            // Dropdown hover functionality
-            $toolsDropdown.addEventListener('mouseenter', function() {
+
+            $dropdown.addEventListener('mouseenter', function() {
                 clearTimeout(hoverTimer);
-                $toolsDropdown.classList.add('open');
+                $dropdown.classList.add('open');
             });
-            
-            $toolsDropdown.addEventListener('mouseleave', function() {
+            $dropdown.addEventListener('mouseleave', function() {
                 hoverTimer = setTimeout(function() {
-                    $toolsDropdown.classList.remove('open');
+                    $dropdown.classList.remove('open');
                 }, 150);
             });
         }
+
+        setupNavDropdown('.tools-dropdown');
+        setupNavDropdown('.gallery-dropdown');
     </script>

@@ -16,6 +16,7 @@ RSS: false
 #weibo_username: 89ao
 zhihu_username: motorao
 github_username: 89ao
+cnb_username: motorao
 #twitter_username: 89ao
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
@@ -37,6 +38,15 @@ exclude:
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN
+
+# Collections
+# `gallery` 集合：每年一个 markdown 文件存放摄影作品
+# 文件路径：_gallery/YEAR.md
+# 必备 frontmatter：year (int), categories (list)
+collections:
+  gallery:
+    output: false
+    sort_by: year
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
@@ -88,9 +98,12 @@ service-worker: true
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
-# Friends
-friends:
+# Things I Love Most (sidebar interest links)
+interests:
   [
+    { title: "cnb", href: "https://cnb.cool/" },
+    { title: "Hasselblad 500cm", href: "https://en.wikipedia.org/wiki/Hasselblad#500_series" },
+    { title: "Hasselblad x1d2", href: "https://en.wikipedia.org/wiki/Hasselblad_X1D" },
     { title: "v2ex", href: "https://v2ex.com/" },
     { title: "Analog Photography", href: "https://www.reddit.com/r/analog/" },
     { title: "Canon VI L", href: "https://flynngraphics.ca/model-finder/vi-l/" },

@@ -9,30 +9,51 @@ layout: default
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <div class="post-content">
-                {{ content | markdownify }}
-            </div>
-            
-            {% for category in page.categories %}
-            <div class="gallery-section">
-                <h2 class="gallery-category">{{ category.name }}</h2>
-                <div class="gallery-container">
-                    {% for image in category.images %}
-                    <div class="gallery-item">
-                        <div class="gallery-image" onclick="toggleZoom(this)">
-                            <img data-src="{{ image.url }}" 
-                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-                                 class="lazy" 
-                                 alt="{{ image.caption }}">
-                        </div>
-                        {% if image.caption %}
-                        <p class="gallery-caption">{{ image.caption }}</p>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
+
+            {% assign sorted_galleries = site.gallery | sort: 'year' | reverse %}
+
+            <!-- 每年内容区：默认只显示最新一年 -->
+            {% for g in sorted_galleries %}
+            <div class="gallery-year-content" id="gallery-year-{{ g.year }}" {% unless forloop.first %}hidden{% endunless %}>
+                {% if g.title %}
+                <h2 class="gallery-year-title">{{ g.title }}</h2>
+                {% endif %}
+
+                {% if g.content and g.content != "" %}
+                <div class="post-content gallery-year-intro">
+                    {{ g.content | markdownify }}
                 </div>
+                {% endif %}
+
+                {% for category in g.categories %}
+                <div class="gallery-section">
+                    <h3 class="gallery-category">{{ category.name }}</h3>
+                    <div class="gallery-container">
+                        {% for image in category.images %}
+                        <div class="gallery-item">
+                            <div class="gallery-image" onclick="toggleZoom(this)">
+                                <img data-src="{{ image.url }}"
+                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                     class="lazy"
+                                     alt="{{ image.caption }}">
+                            </div>
+                            {% if image.caption %}
+                            <p class="gallery-caption">{{ image.caption }}</p>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
             </div>
             {% endfor %}
+
+            {% if sorted_galleries.size == 0 %}
+            <div class="post-content">
+                <p>暂无图集。请在 <code>_gallery/</code> 目录下按 <code>YEAR.md</code> 格式创建文件。</p>
+            </div>
+            {% endif %}
+
         </div>
     </div>
 </div>
@@ -42,7 +63,7 @@ layout: default
         margin-bottom: 30px;
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
     }
-    
+
     .post-content h2 {
         color: #2f2f2f;
         margin: 40px 0 20px;
@@ -51,12 +72,20 @@ layout: default
         line-height: 1.4;
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
     }
-    
+
     .post-content p {
         margin: 0 0 1em;
         font-size: 16px;
         line-height: 1.8;
         color: #404040;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    }
+
+    .gallery-year-title {
+        color: #2f2f2f;
+        margin: 10px 0 20px;
+        font-size: 22px;
+        font-weight: 500;
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
     }
 
@@ -68,20 +97,20 @@ layout: default
         grid-gap: 20px;
         padding: 20px 0;
     }
-    
+
     .gallery-item {
         position: relative;
         overflow: hidden;
         border-radius: 4px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    
+
     .gallery-image {
         position: relative;
         cursor: pointer;
         transition: all 0.3s ease;
     }
-    
+
     .gallery-image img {
         width: 100%;
         height: 200px;
@@ -89,17 +118,17 @@ layout: default
         vertical-align: middle;
         transition: transform 0.3s ease;
     }
-    
+
     .gallery-item,
     .gallery-image,
     .gallery-image img {
         margin-bottom: 0;
     }
-    
+
     .gallery-item:hover .gallery-image img {
         transform: scale(1.05);
     }
-    
+
     .gallery-caption {
         margin: 8px 0;
         text-align: center;
@@ -149,7 +178,7 @@ layout: default
             width: 95%;
             grid-template-columns: repeat(2, 1fr);
         }
-        
+
         .gallery-image img {
             height: 150px;
         }
@@ -164,7 +193,7 @@ layout: default
     .gallery-section {
         margin-bottom: 50px;
     }
-    
+
     .gallery-category {
         color: #2f2f2f;
         margin: 40px 0 20px;
@@ -224,47 +253,111 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// 懒加载实现
-document.addEventListener("DOMContentLoaded", function() {
-    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-    let active = false;
+// 切换年份
+function onGalleryYearChange(year) {
+    var sections = document.querySelectorAll('.gallery-year-content');
+    sections.forEach(function(sec) {
+        sec.hidden = (sec.id !== 'gallery-year-' + year);
+    });
+    // 持久化 + URL hash
+    try { localStorage.setItem('gallery_year', String(year)); } catch (e) {}
+    if (history && history.replaceState) {
+        history.replaceState(null, '', '#' + year);
+    }
+    // 滚到顶部，方便看新内容
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 触发图片懒加载
+    loadVisibleLazyImages();
+}
 
-    const lazyLoad = function() {
+// 加载当前可见区域内的懒加载图片
+function loadVisibleLazyImages() {
+    var lazyImages = [].slice.call(document.querySelectorAll('.gallery-year-content:not([hidden]) img.lazy'));
+    if (lazyImages.length === 0) return;
+
+    var active = false;
+    var lazyLoad = function() {
         if (active === false) {
             active = true;
-
             setTimeout(function() {
                 lazyImages.forEach(function(lazyImage) {
-                    if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                    if (!lazyImage.dataset.src) return;
+                    var rect = lazyImage.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
                         lazyImage.src = lazyImage.dataset.src;
                         lazyImage.classList.add("loaded");
                         lazyImage.onload = function() {
                             this.style.opacity = 1;
                         };
-
                         lazyImages = lazyImages.filter(function(image) {
                             return image !== lazyImage;
                         });
-
-                        if (lazyImages.length === 0) {
-                            document.removeEventListener("scroll", lazyLoad);
-                            window.removeEventListener("resize", lazyLoad);
-                            window.removeEventListener("orientationchange", lazyLoad);
-                        }
                     }
                 });
-
                 active = false;
-            }, 200);
+            }, 100);
         }
     };
-
-    // 添加各种事件监听
-    document.addEventListener("scroll", lazyLoad);
-    window.addEventListener("resize", lazyLoad);
-    window.addEventListener("orientationchange", lazyLoad);
-    
-    // 初始加载
     lazyLoad();
+}
+
+// 页面加载时：按 URL hash > localStorage > 默认（最新年）的优先级决定显示哪一年
+document.addEventListener("DOMContentLoaded", function() {
+    var sections = document.querySelectorAll('.gallery-year-content');
+    if (sections.length === 0) return;
+
+    var availableYears = [];
+    sections.forEach(function(sec) {
+        var m = sec.id.match(/^gallery-year-(\d+)$/);
+        if (m) availableYears.push(m[1]);
+    });
+    if (availableYears.length === 0) return;
+
+    var chosen = null;
+    // 1. URL hash 优先（支持直接打开 /gallery#2023）
+    var hash = (window.location.hash || '').replace('#', '');
+    if (availableYears.indexOf(hash) !== -1) {
+        chosen = hash;
+    }
+    // 2. localStorage（记住上次选择）
+    if (!chosen) {
+        try {
+            var saved = localStorage.getItem('gallery_year');
+            if (saved && availableYears.indexOf(saved) !== -1) {
+                chosen = saved;
+            }
+        } catch (e) {}
+    }
+    // 3. 默认最新年（页面默认已显示第一个）
+    if (!chosen) {
+        chosen = availableYears[0];
+    }
+
+    if (chosen) {
+        onGalleryYearChange(chosen);
+    }
+
+    // 监听 hashchange 事件（用户通过 nav 下拉切换年份时不重载页面）
+    window.addEventListener('hashchange', function() {
+        var h = (window.location.hash || '').replace('#', '');
+        if (availableYears.indexOf(h) !== -1) {
+            onGalleryYearChange(h);
+        }
+    });
+
+    // 监听滚动实现图片懒加载
+    var scrollTimer = null;
+    var onScroll = function() {
+        if (scrollTimer) return;
+        scrollTimer = setTimeout(function() {
+            loadVisibleLazyImages();
+            scrollTimer = null;
+        }, 100);
+    };
+    document.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    window.addEventListener("orientationchange", onScroll);
+    // 初始加载
+    loadVisibleLazyImages();
 });
-</script> 
+</script>

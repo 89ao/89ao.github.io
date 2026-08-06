@@ -1,0 +1,9 @@
+{% if site.interests %}
+<hr>
+<h5>Things I Love Most</h5>
+<ul class="list-inline">
+  {% for item in site.interests %}
+  <li><a href="{{item.href}}">{{item.title}}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
