@@ -102,8 +102,8 @@ page-mathjax: false
 interests:
   [
     { title: "cnb", href: "https://cnb.cool/" },
-    { title: "Hasselblad 500cm", href: "https://en.wikipedia.org/wiki/Hasselblad#500_series" },
-    { title: "Hasselblad x1d2", href: "https://en.wikipedia.org/wiki/Hasselblad_X1D" },
+    { title: "Hasselblad 500cm", href: "https://www.hasselblad.com/about/history/500-series/" },
+    { title: "Hasselblad x1d2", href: "https://www.hasselblad.com/x-system/x1d/" },
     { title: "v2ex", href: "https://v2ex.com/" },
     { title: "Analog Photography", href: "https://www.reddit.com/r/analog/" },
     { title: "Canon VI L", href: "https://flynngraphics.ca/model-finder/vi-l/" },
