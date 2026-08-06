@@ -35,6 +35,7 @@ layout: default
                                 <img data-src="{{ image.url }}"
                                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                      class="lazy"
+                                     loading="lazy"
                                      alt="{{ image.caption }}">
                             </div>
                             {% if image.caption %}
@@ -373,46 +374,40 @@ function onGalleryYearChange(year) {
     sections.forEach(function(sec) {
         sec.hidden = (sec.id !== 'gallery-year-' + year);
     });
-    // 持久化 + URL hash
     try { localStorage.setItem('gallery_year', String(year)); } catch (e) {}
     if (history && history.replaceState) {
         history.replaceState(null, '', '#' + year);
     }
-    // 滚到顶部，方便看新内容
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // 触发图片懒加载
-    loadVisibleLazyImages();
 }
 
-// 加载当前可见区域内的懒加载图片
-function loadVisibleLazyImages() {
-    var lazyImages = [].slice.call(document.querySelectorAll('.gallery-year-content:not([hidden]) img.lazy'));
-    if (lazyImages.length === 0) return;
+// 初始化 IntersectionObserver（替代 scroll 事件，按需加载）
+function initLazyObserver() {
+    if (window._galleryObserver) {
+        window._galleryObserver.disconnect();
+    }
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    img.style.opacity = '1';
+                }
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '200px 0px'  // 提前 200px 加载
+    });
 
-    var active = false;
-    var lazyLoad = function() {
-        if (active === false) {
-            active = true;
-            setTimeout(function() {
-                lazyImages.forEach(function(lazyImage) {
-                    if (!lazyImage.dataset.src) return;
-                    var rect = lazyImage.getBoundingClientRect();
-                    if (rect.top <= window.innerHeight && rect.bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
-                        lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.classList.add("loaded");
-                        lazyImage.onload = function() {
-                            this.style.opacity = 1;
-                        };
-                        lazyImages = lazyImages.filter(function(image) {
-                            return image !== lazyImage;
-                        });
-                    }
-                });
-                active = false;
-            }, 100);
-        }
-    };
-    lazyLoad();
+    // 只 observer 当前可见年份中的图片
+    var images = document.querySelectorAll('.gallery-year-content:not([hidden]) img.lazy');
+    images.forEach(function(img) {
+        observer.observe(img);
+    });
+    window._galleryObserver = observer;
 }
 
 // 页面加载时：按 URL hash > localStorage > 默认（最新年）的优先级决定显示哪一年
@@ -509,27 +504,16 @@ document.addEventListener("DOMContentLoaded", function() {
         onGalleryYearChange(chosen);
     }
 
-    // 监听 hashchange 事件（用户通过 nav 下拉切换年份时不重载页面）
+    // 监听 hashchange 事件（用户通过 nav 下拉切换年份时重新 observer）
     window.addEventListener('hashchange', function() {
         var h = (window.location.hash || '').replace('#', '');
         if (availableYears.indexOf(h) !== -1) {
             onGalleryYearChange(h);
+            initLazyObserver();
         }
     });
 
-    // 监听滚动实现图片懒加载
-    var scrollTimer = null;
-    var onScroll = function() {
-        if (scrollTimer) return;
-        scrollTimer = setTimeout(function() {
-            loadVisibleLazyImages();
-            scrollTimer = null;
-        }, 100);
-    };
-    document.addEventListener("scroll", onScroll);
-    window.addEventListener("resize", onScroll);
-    window.addEventListener("orientationchange", onScroll);
-    // 初始加载
-    loadVisibleLazyImages();
+    // 启动懒加载
+    initLazyObserver();
 });
 </script>
