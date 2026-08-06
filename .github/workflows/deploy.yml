@@ -36,3 +36,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/deploy-pages@v4
+      - name: Bark 发布成功通知
+        if: success()
+        run: |
+          curl -s "https://api.day.app/PWhxDvCuLGMofA5cr8YuaY/89ao.github.io%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F?url=https://motorao.cn"
+      - name: Bark 构建失败通知
+        if: failure()
+        run: |
+          curl -s "https://api.day.app/PWhxDvCuLGMofA5cr8YuaY/89ao.github.io%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5?url=https://motorao.cn"

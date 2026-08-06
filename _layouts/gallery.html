@@ -218,38 +218,152 @@ layout: default
     .lazy.loaded {
         opacity: 1;
     }
+
+    /* 导航箭头 */
+    .gallery-nav-arrow {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+        width: 50px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 32px;
+        transition: color 0.2s, background 0.2s;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .gallery-nav-arrow:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+    }
+    .gallery-nav-arrow.prev {
+        left: 0;
+        border-radius: 0 4px 4px 0;
+    }
+    .gallery-nav-arrow.next {
+        right: 0;
+        border-radius: 4px 0 0 4px;
+    }
+
+    /* 关闭按钮 */
+    .gallery-close-btn {
+        position: fixed;
+        top: 20px;
+        right: 24px;
+        z-index: 1001;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 28px;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        transition: color 0.2s;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .gallery-close-btn:hover {
+        color: #fff;
+    }
 </style>
 
 <script>
+// 获取当前可见年份中所有图片
+function getVisibleGalleryImages() {
+    var container = document.querySelector('.gallery-year-content:not([hidden])');
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('.gallery-image'));
+}
+
+// 取消所有放大
+function closeAllZoom() {
+    document.querySelectorAll('.gallery-image.zoomed').forEach(function(el) {
+        el.classList.remove('zoomed');
+    });
+    document.body.style.overflow = '';
+}
+
+// 跳转到第 index 张图片的放大视图
+function galleryZoomTo(index) {
+    var images = getVisibleGalleryImages();
+    if (index < 0 || index >= images.length) return;
+    closeAllZoom();
+    document.body.style.overflow = 'hidden';
+    var target = images[index];
+    // 确保图片已加载
+    var img = target.querySelector('img');
+    if (img && img.dataset.src) {
+        img.src = img.dataset.src;
+        img.classList.add('loaded');
+        img.style.opacity = '1';
+    }
+    target.classList.add('zoomed');
+    updateArrowVisibility(index, images.length);
+}
+
+// 更新左右箭头显示状态
+function updateArrowVisibility(current, total) {
+    var prev = document.querySelector('.gallery-nav-arrow.prev');
+    var next = document.querySelector('.gallery-nav-arrow.next');
+    if (prev) prev.style.display = current > 0 ? 'flex' : 'none';
+    if (next) next.style.display = current < total - 1 ? 'flex' : 'none';
+}
+
 function toggleZoom(element) {
     if (element.classList.contains('zoomed')) {
-        // 取消放大
-        element.classList.remove('zoomed');
-        document.body.style.overflow = '';
+        closeAllZoom();
     } else {
-        // 放大
-        element.classList.add('zoomed');
-        document.body.style.overflow = 'hidden';
+        var images = getVisibleGalleryImages();
+        var index = images.indexOf(element);
+        galleryZoomTo(index >= 0 ? index : 0);
     }
 }
 
-// 点击放大的图片外部区域也可以关闭
+// 点击放大视图：img 上不处理，暗区左右半区翻页
 document.addEventListener('click', function(e) {
-    if (e.target.closest('.gallery-image.zoomed')) {
-        const zoomed = e.target.closest('.gallery-image.zoomed');
-        if (e.target === zoomed) {
-            toggleZoom(zoomed);
-        }
+    const zoomed = document.querySelector('.gallery-image.zoomed');
+    if (!zoomed) return;
+    // 箭头/关闭按钮 → 已有独立处理
+    if (e.target.closest('.gallery-nav-arrow') || e.target.closest('.gallery-close-btn')) return;
+    // 点图片本身 → 不处理
+    if (e.target.tagName === 'IMG') return;
+    // 不在放大层内 → 不处理
+    if (!e.target.closest('.gallery-image.zoomed')) return;
+
+    var half = window.innerWidth / 2;
+    var images = getVisibleGalleryImages();
+    var current = images.indexOf(zoomed);
+    if (e.clientX < half && current > 0) {
+        galleryZoomTo(current - 1);
+    } else if (e.clientX >= half && current < images.length - 1) {
+        galleryZoomTo(current + 1);
     }
 });
 
-// 按ESC键也可以关闭放大的图片
+// 键盘快捷键
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        const zoomed = document.querySelector('.gallery-image.zoomed');
-        if (zoomed) {
-            toggleZoom(zoomed);
-        }
+    const zoomed = document.querySelector('.gallery-image.zoomed');
+    if (!zoomed) return;
+    var images = getVisibleGalleryImages();
+    var current = images.indexOf(zoomed);
+
+    switch (e.key) {
+        case 'Escape':
+            closeAllZoom();
+            break;
+        case 'ArrowLeft':
+            if (current > 0) galleryZoomTo(current - 1);
+            break;
+        case 'ArrowRight':
+            if (current < images.length - 1) galleryZoomTo(current + 1);
+            break;
     }
 });
 
@@ -303,6 +417,64 @@ function loadVisibleLazyImages() {
 
 // 页面加载时：按 URL hash > localStorage > 默认（最新年）的优先级决定显示哪一年
 document.addEventListener("DOMContentLoaded", function() {
+    // 注入导航箭头和关闭按钮
+    var body = document.body;
+    var prevArrow = document.createElement('div');
+    prevArrow.className = 'gallery-nav-arrow prev';
+    prevArrow.innerHTML = '&#10094;';
+    prevArrow.style.display = 'none';
+    prevArrow.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var zoomed = document.querySelector('.gallery-image.zoomed');
+        if (!zoomed) return;
+        var images = getVisibleGalleryImages();
+        var current = images.indexOf(zoomed);
+        if (current > 0) galleryZoomTo(current - 1);
+    });
+    body.appendChild(prevArrow);
+
+    var nextArrow = document.createElement('div');
+    nextArrow.className = 'gallery-nav-arrow next';
+    nextArrow.innerHTML = '&#10095;';
+    nextArrow.style.display = 'none';
+    nextArrow.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var zoomed = document.querySelector('.gallery-image.zoomed');
+        if (!zoomed) return;
+        var images = getVisibleGalleryImages();
+        var current = images.indexOf(zoomed);
+        if (current < images.length - 1) galleryZoomTo(current + 1);
+    });
+    body.appendChild(nextArrow);
+
+    var closeBtn = document.createElement('div');
+    closeBtn.className = 'gallery-close-btn';
+    closeBtn.innerHTML = '&#10005;';
+    closeBtn.style.display = 'none';
+    closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeAllZoom();
+    });
+    body.appendChild(closeBtn);
+
+    // 扩展 closeAllZoom 以隐藏箭头和关闭按钮
+    var _closeAllZoom = closeAllZoom;
+    closeAllZoom = function() {
+        _closeAllZoom();
+        prevArrow.style.display = 'none';
+        nextArrow.style.display = 'none';
+        closeBtn.style.display = 'none';
+    };
+
+    // 扩展 galleryZoomTo 以显示箭头和关闭按钮
+    var _galleryZoomTo = galleryZoomTo;
+    galleryZoomTo = function(index) {
+        _galleryZoomTo(index);
+        prevArrow.style.display = (index > 0) ? 'flex' : 'none';
+        var images = getVisibleGalleryImages();
+        nextArrow.style.display = (index < images.length - 1) ? 'flex' : 'none';
+        closeBtn.style.display = 'flex';
+    };
     var sections = document.querySelectorAll('.gallery-year-content');
     if (sections.length === 0) return;
 
