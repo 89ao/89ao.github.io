@@ -1,0 +1,13 @@
+main:
+  push:
+    - imports: https://cnb.cool/motorao/env/-/blob/main/envs.yml
+      stages:
+        - name: Build Jekyll site
+          image: ruby:3.3
+          script: |
+            gem install bundler
+            bundle install
+            bundle exec jekyll build
+        - name: Deploy to EdgeOne Makers
+          image: node:20
+          script: npx edgeone makers deploy _site -n 89ao-blog -t $EDGEONE_API_TOKEN
