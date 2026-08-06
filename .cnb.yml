@@ -1,4 +1,4 @@
-main:
+master:
   push:
     - imports: https://cnb.cool/motorao/secrets/-/blob/main/envs.yml
       stages:
