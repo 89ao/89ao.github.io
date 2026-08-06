@@ -36,6 +36,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/deploy-pages@v4
+        id: deployment
       - name: Bark 发布成功通知
         if: success()
         run: |
