@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -38,6 +38,8 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
+        with:
+          timeout: 1200000
       - name: Bark 发布成功通知
         if: success()
         run: |
